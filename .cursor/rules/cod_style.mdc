@@ -1,0 +1,90 @@
+---
+description: 
+globs: 
+alwaysApply: true
+---
+Object-Oriented Programming Guidelines
+Rules for Classes (OOP)
+Rigorous Encapsulation
+
+Use private attributes (__attribute) or protected attributes (_attribute) when necessary
+Expose clear public interfaces through getter and setter methods or properties when needed
+
+Composition over Inheritance
+
+Use composition instead of multiple inheritance whenever possible
+Implement inheritance only to reuse truly common behaviors
+
+Clear and Concise Methods
+
+Methods generally should not exceed 20 lines of code
+Methods should be self-explanatory through their name and brief docstring
+
+Example:
+
+class UserManager:
+    def __init__(self, repository):
+        self._repository = repository
+
+    def register_user(self, user):
+        """Registers a new user in the system."""
+        if self._user_exists(user):
+            raise ValueError("User already exists")
+        self._repository.save(user)
+
+    def _user_exists(self, user):
+        """Verifies if the user exists."""
+        return self._repository.exists(user.id)
+
+
+
+Rules for Functions
+Pure Functions (No Side Effects)
+
+Avoid functions that alter global or external states
+Each function receives clearly defined parameters and returns results without modifying inputs
+
+Example:
+
+
+def calculate_price_with_tax(price: float, tax: float) -> float:
+    """Returns the price with taxes included."""
+    return price * (1 + tax)
+
+
+
+Clear and Specific Exception Handling
+
+Use concrete and well-defined exceptions
+Use specific try-except blocks and avoid catching broad exceptions (like Exception)
+
+Scalability and Optimization
+Avoiding Unnecessary Algorithmic Complexity
+
+Whenever possible, maintain O(n) complexity or lower
+Avoid inefficient operations such as repeated linear searches
+Use efficient data structures (set, dict, defaultdict, Counter, etc.)
+
+Code Prepared for Growth
+
+Use interfaces and abstractions to allow easy replacement of components
+Enable integration of new functionalities without altering existing code
+
+Efficient Resource Usage
+
+Consider generators instead of lists for large data sets
+Avoid loading everything into memory if not absolutely necessary
+
+Example:
+
+
+def process_large_file(file_path):
+    """Reads a file line by line using a generator."""
+    with open(file_path, 'r') as file:
+        for line in file:
+            yield process_line(line)
+
+
+
+
+            

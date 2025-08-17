@@ -1,0 +1,541 @@
+# **Magerit**
+
+**MAGERIT** es la metodología de análisis y gestión de riesgos elaborada por el Consejo Superior de Administración Electrónica, que permite estudiar los riesgos que soporta un sistema de información y el entorno asociado a él.
+
+MAGERIT propone la realización de un análisis de los riesgos que implica la evaluación del impacto que una violación de la seguridad tiene en la organización; señala los riesgos existentes, identificando las amenazas que acechan al sistema de información, y determina la vulnerabilidad del sistema de prevención de dichas amenazas, obteniendo unos resultados.
+
+Los resultados del análisis de riesgos permiten a la Gestión de Riesgos recomendar las medidas apropiadas que deberían adoptarse para conocer, prevenir, impedir, reducir o controlar los riesgos identificados y así reducir al mínimo su potencialidad o sus posibles perjuicios. MAGERIT interesa a todos aquellos que trabajan con información digital y sistemas informáticos para tratarla. Si dicha información, o los servicios que se prestan gracias a ella, son valiosos, MAGERIT les permitirá saber cuánto valor está en juego y les ayudará a protegerlo.
+
+Conocer el riesgo al que están sometidos los elementos de trabajo es, simplemente, imprescindible para poder gestionarlos. Con MAGERIT se persigue una aproximación metódica que no deje lugar a la improvisación, ni dependa de la arbitrariedad del analista. El análisis y gestión de los riesgos es un aspecto clave del Real Decreto 311/2022, de 3 de mayo, por el que se regula el Esquema Nacional de Seguridad en el ámbito de la Administración Electrónica que tiene la finalidad de poder dar satisfacción al principio de proporcionalidad en el cumplimiento de los principios básicos y requisitos mínimos para la protección adecuada de la información. MAGERIT es un instrumento para facilitar la implantación y aplicación del Esquema Nacional de Seguridad proporcionando los principios básicos y requisitos mínimos para la protección adecuada de la información.
+
+En esta línea presentamos este documento, en el que resaltamos los aspectos fundamentales del método Magerit, el cual confiamos que sea de utilidad para todos los que nos vemos involucrados en hacer frente a los retos planteados en este proceso de cambio.
+
+![image.png](attachment:00c3fd6f-764f-4202-945b-1e34f93c82c7:image.png)
+
+# **El análisis del riesgo**
+
+Un análisis de riesgos TIC es recomendable para cualquier organización que dependa de sistemas de información para cumplir su misión.
+
+Esto es especialmente importante en entornos donde se realiza tramitación electrónica de bienes y servicios, tanto en contextos públicos como privados.
+
+Este análisis permite tomar decisiones de gestión y asignar recursos (tecnológicos, humanos o financieros) con una perspectiva de negocio.
+
+El análisis de riesgos funciona como una herramienta de gestión para la toma de decisiones, ya sea antes de implementar un servicio o cuando este ya está en funcionamiento. Es preferible realizarlo antes, para que las medidas necesarias se incorporen desde el diseño del servicio, la selección de componentes, el desarrollo del sistema y los manuales de usuario. Corregir riesgos imprevistos resulta costoso en tiempo y recursos, lo que puede perjudicar la imagen de la organización y, en casos extremos, provocar pérdida de confianza en su capacidad. Como dice el refrán: es mejor prevenir que curar. No espere a que un servicio falle; anticípese y esté preparado.
+
+Realizar un análisis de riesgos requiere dedicación y recursos. Crear un mapa de activos y valorarlos necesita la colaboración de diversos perfiles dentro de la organización, desde gerencia hasta personal técnico. Además de involucrar a múltiples personas, es fundamental lograr un criterio uniforme, pues tan importante como cuantificar los riesgos es establecer su importancia relativa. En un análisis típico aparecen numerosos datos, y la única forma de manejar esta complejidad es centrarse en lo más relevante (mayor impacto, mayor riesgo) y descartar lo secundario. Sin una correcta ordenación relativa de los riesgos, su interpretación se vuelve imposible.
+
+En resumen, un análisis de riesgos no es una tarea secundaria que pueda realizarse en momentos libres. Es una labor importante que requiere esfuerzo y coordinación, por lo que debe ser planificada y justificada adecuadamente.
+
+**La gestión del riesgo**
+
+La Gestión de Riesgos comprende dos tareas principales:
+
+- ***Análisis de riesgos***, que permite determinar qué tiene la organización y estimar lo que podría ocurrir.
+- ***Tratamiento de los riesgos***, que permite organizar una defensa cuidadosa y prudente, previniendo problemas y, al mismo tiempo, preparándose para afrontar emergencias, superar incidentes y continuar operando en las mejores condiciones posibles. Como ningún sistema es perfecto, se acepta que el riesgo se reduce a un nivel residual que la Dirección asume. Estas dos actividades, análisis y tratamiento, se integran en el proceso denominado Gestión de Riesgos.
+
+![image.png](attachment:2342ccff-b43c-4313-909a-17717c7023fd:image.png)
+
+El análisis de riesgos considera los siguientes elementos:
+
+1. **Activos**, que son los elementos del sistema de información (o estrechamente relacionados con este) que soportan la misión de la Organización.
+2. **Amenazas**, que son eventos que pueden afectar a los activos causando perjuicio a la Organización.
+3. **Salvaguardas** (o contramedidas), que son medidas de protección implementadas para evitar o reducir el daño que las amenazas pueden causar.
+
+Con estos elementos se puede estimar:
+
+1. **El impacto:** lo que podría ocurrir.
+2. **El riesgo:** lo que probablemente ocurrirá.
+
+El análisis de riesgos permite examinar estos elementos de forma metódica para llegar a conclusiones fundamentadas y proceder a la fase de tratamiento. En términos simples, la gestión de la seguridad de un sistema de información es la gestión de sus riesgos, y el análisis permite racionalizar dicha gestión.
+
+El análisis de riesgos sigue una metodología estructurada con estos pasos:
+
+1. **Determinar los activos relevantes** para la Organización, su interrelación y su valor, considerando qué perjuicio (coste) supondría su degradación.
+2. **Determinar a qué amenazas** están expuestos dichos activos.
+3. **Determinar qué salvaguardas** existen y cuán eficaces son frente al riesgo.
+4. **Estimar el impacto**, definido como el daño sobre el activo derivado de la materialización de la amenaza.
+5. **Estimar el riesgo**, definido como el impacto ponderado con la tasa de ocurrencia (o expectativa de materialización) de la amenaza. Estas valoraciones son teóricas si no hubiera salvaguardas desplegadas. Una vez obtenido este escenario teórico, se incorporan las salvaguardas del paso 3, derivando estimaciones realistas de impacto y riesgo.
+
+# **Los activos:**
+
+![image.png](attachment:513a40f2-fa5d-421f-9a1e-7e91a154163c:image.png)
+
+**¿Qué son los Activos?**
+
+Un activo es cualquier componente o funcionalidad de un sistema de información que puede ser atacado, ya sea deliberada o accidentalmente, con consecuencias para la organización.
+
+En un sistema de información existen dos elementos esenciales: la información que maneja y los servicios que presta. Estos activos fundamentales establecen los requisitos de seguridad para todos los demás componentes del sistema.
+
+Subordinados a estos elementos esenciales, podemos identificar otros **activos relevantes**:
+
+- Servicios auxiliares necesarios para la organización del sistema.
+- Aplicaciones informáticas (software) que permiten el manejo de datos.
+- Equipos informáticos (hardware) que hospedan datos, aplicaciones y servicios.
+- Soportes de información, que funcionan como dispositivos de almacenamiento de datos.
+- Equipamiento auxiliar que complementa el material informático.
+- Redes de comunicaciones que facilitan el intercambio de datos.
+- Instalaciones que albergan equipos informáticos y de comunicaciones.
+- Personas que operan y gestionan todos los elementos anteriores.
+
+Es importante destacar que no todos los activos son de la misma naturaleza. Según el tipo de activo, las amenazas y las salvaguardas necesarias serán diferentes.
+
+¿Cuál es el valor de los activos?
+
+La valoración debe realizarse desde la perspectiva de la necesidad de protección. A mayor valor del activo, mayor nivel de protección requeriremos en las dimensiones de seguridad pertinentes.
+
+El valor puede ser propio o acumulado. Los activos inferiores en un esquema de dependencias acumulan el valor de los activos que se apoyan en ellos. El valor central suele residir en la información manejada y los servicios prestados (activos esenciales), quedando los demás activos subordinados a las necesidades de explotación y protección de lo esencial. La valoración determina el coste que supondría recuperarse de una incidencia que destruyera el activo.
+
+Hay varios **factores** a considerar en esta valoración:
+
+- **Coste de reposición**: adquisición e instalación.
+- **Coste de mano de obra especializada** invertida en recuperar el valor del activo.
+- **Lucro cesante**: pérdida de ingresos.
+- **Capacidad de operar**: pérdida de confianza de usuarios y proveedores que se traduce en menor actividad o peores condiciones económicas.
+- **Sanciones** por incumplimiento de leyes u obligaciones contractuales.
+- **Daño a otros activos**, propios o ajenos.
+- **Daño a personas**.
+- **Daños medioambientales**: la valoración puede ser cuantitativa (con una cantidad numérica) o cualitativa (en una escala de niveles).
+
+Los **criterios** más importantes a considerar son:
+
+- **La homogeneidad**: es fundamental poder comparar valores de diferentes dimensiones para combinar valores propios y acumulados, y determinar la gravedad relativa del daño entre dimensiones.
+- **La relatividad**: es necesario poder comparar el valor de un activo frente a otros activos.
+
+Ambos criterios se satisfacen mediante valoraciones económicas (coste necesario para recuperar el activo) y es común la tentación de asignar un precio a todo. Si esto se logra, es excelente.
+
+Es relativamente sencillo asignar un valor a los aspectos tangibles (equipamiento, horas de trabajo, etc.). Sin embargo, al abordar valoraciones más abstractas (como la credibilidad de la organización), la valoración económica precisa resulta difícil y puede generar desacuerdos significativos entre los analistas.
+
+# **Valoración y activos:**
+
+**¿Qué aporta una Valoración Cualitativa?**
+
+Las escalas cualitativas permiten avanzar con rapidez, posicionando el valor de cada activo en un orden relativo respecto de los demás. Es común plantear estas escalas como órdenes de magnitud y, consecuentemente, obtener estimaciones sobre la magnitud del riesgo.
+
+Sin embargo, la limitación principal de las valoraciones cualitativas es que no permiten comparar valores más allá de su orden relativo. No es posible sumar estos valores.
+
+**¿Podemos realizar una Valoración Cuantitativa?**
+
+Las valoraciones numéricas absolutas requieren mayor esfuerzo, pero permiten sumar valores de forma natural. La interpretación de estas sumas nunca genera controversia. Si la valoración es dineraria, además se pueden realizar estudios económicos comparando lo que se arriesga con el costo de la solución, respondiendo a preguntas como:
+
+*¿Vale la pena invertir tanto dinero en esta salvaguarda?*
+
+*¿Qué conjunto de salvaguardas optimiza la inversión?*
+
+*¿En qué plazo se recupera la inversión?*
+
+*¿Cuánto es razonable que cueste la prima de un seguro?*
+
+# **Dependencia entre activos y amenazas**
+
+Los activos vienen a formar árboles o grafos de dependencias donde la seguridad de los activos que se encuentran más arriba en la estructura o superiores depende de los activos que se encuentran más abajo o inferiores. Estas estructuras reflejan de arriba hacia abajo las dependencias, mientas que de abajo hacia arriba la propagación del daño caso de materializarse las amenazas. Se dice que un “activo superior” depende de otro “activo inferior” cuando las necesidades de seguridad del superior se reflejan en las necesidades de seguridad del inferior. Típicamente, la estructura de dependencia sigue el siguiente grafo:
+
+![image.png](attachment:c6b9f548-0cc8-4eac-805b-ebaaccbf76f4:image.png)
+
+**¿Qué son las Amenazas?**
+
+Las amenazas son "cosas que ocurren" que pueden afectar a nuestros activos y causar daño.
+
+Se clasifican típicamente en:
+
+- **De origen natural:** Accidentes naturales como terremotos e inundaciones. Ante estos eventos, el sistema de información es víctima pasiva, pero debemos anticipar sus posibles efectos.
+- **Del entorno (de origen industrial):** Desastres como contaminación o fallos eléctricos donde el sistema es víctima pasiva. Aunque no podamos evitarlos, debemos protegernos contra ellos.
+- **Defectos de las aplicaciones:** Problemas originados en el equipamiento propio por fallos en su diseño o implementación, con potenciales consecuencias negativas. Comúnmente denominados vulnerabilidades técnicas o simplemente vulnerabilidades.
+- **Causadas por personas accidentalmente:** Problemas no intencionados provocados por personas con acceso al sistema, generalmente por error u omisión.
+- **Causadas por personas deliberadamente:** Ataques intencionados realizados por personas con acceso al sistema, ya sea para beneficio propio o para causar daños a los legítimos propietarios. Es importante notar que no todas las amenazas afectan a todos los activos, existiendo relaciones específicas entre tipos de activos y sus amenazas potenciales.
+
+**¿Cómo afectan las amenazas al valor de los activos?**
+
+Al identificar que una amenaza puede perjudicar a un activo, debemos valorar su influencia en dos aspectos:
+
+- **Degradación:** Nivel de daño que sufriría el activo. Mide el perjuicio causado por un incidente si llegara a ocurrir. Se suele expresar como fracción del valor del activo, usando términos como "totalmente degradado" o "degradado en una pequeña fracción".
+- **Probabilidad:** Posibilidad de que la amenaza se materialice. Es más difícil de determinar y expresar. Puede modelarse cualitativamente mediante escalas nominales o numéricamente como frecuencia de ocurrencia. Habitualmente se usa un período de 1 año como referencia, empleando la tasa anual de ocurrencia para medir la probabilidad del evento.
+
+# **Impacto y Riesgo Potencial**
+
+**¿Qué es el Impacto?**
+
+A partir del valor de los activos y la degradación causada por las amenazas, podemos determinar el impacto que estas tendrían sobre el sistema. Se distinguen dos tipos de impacto:
+
+- **Impacto acumulado**: Calculado sobre un activo considerando su valor acumulado (el propio más el de los activos que dependen de él) y las amenazas a las que está expuesto.
+- **Impacto repercutido**: Calculado sobre un activo teniendo en cuenta solo su valor propio y las amenazas que afectan a los activos de los que depende.
+
+**¿Qué es el Riesgo Potencial?**
+
+El riesgo es la medida del daño probable sobre un sistema. Una vez conocido el impacto de las amenazas sobre los activos, para calcular el riesgo solo necesitamos incorporar la probabilidad de ocurrencia.
+
+El riesgo aumenta con el impacto y con la probabilidad. En su tratamiento, podemos identificar cuatro zonas características:
+
+- **zona 1** – riesgos muy probables y de muy alto impacto.
+- **zona 2** – abarca desde situaciones improbables de impacto medio hasta situaciones muy probables de impacto bajo o muy bajo.
+- **zona 3** – riesgos improbables y de bajo impacto.
+- **zona 4** – riesgos improbables pero de muy alto impacto.
+
+![image.png](attachment:cfbc0ffd-925a-444d-85f5-3f10952c2d93:image.png)
+
+**Riesgo acumulado**: Es el calculado sobre un activo teniendo en cuenta el impacto acumulado sobre un activo debido a una amenaza y la probabilidad de la amenaza.
+
+**Riesgo repercutido**: Es el calculado sobre un activo teniendo en cuenta el impacto repercutido sobre un activo debido a una amenaza y la probabilidad de la amenaza.
+
+# **Salvaguardas**
+
+**¿Qué son las Salvaguardas?**
+
+Las salvaguardas, o contramedidas, son procedimientos o mecanismos tecnológicos que reducen el riesgo. Dado el amplio abanico de posibles salvaguardas, es necesario realizar una criba inicial para seleccionar aquellas relevantes para lo que necesitamos proteger. En esta selección debemos considerar:
+
+1. **Tipo de activos a proteger**, ya que cada tipo requiere una protección específica.
+2. **Dimensión o dimensiones de seguridad** que requieren protección.
+3. **Amenazas** de las que necesitamos protegernos.
+4. La existencia de **salvaguardas** alternativas.
+
+Además, es importante establecer un principio de proporcionalidad considerando:
+
+1. El ***valor propio o acumulado*** del activo, priorizando lo más valioso y descartando lo irrelevante.
+2. La ***probabilidad*** de que ocurra una amenaza, centrándose en los riesgos más importantes (ver zonas de riesgo).
+3. La ***cobertura del riesgo*** que proporcionan salvaguardas alternativas. Esto nos lleva a dos tipos de exclusiones:
+- *no aplica* – cuando una salvaguarda no es técnicamente adecuada para el tipo de activos, no protege la dimensión necesaria o no protege frente a la amenaza en cuestión.
+- *no se justifica* – cuando la salvaguarda aplica, pero resulta desproporcionada al riesgo que debemos proteger. El resultado de estas consideraciones será una "declaración de aplicabilidad" o relación de salvaguardas que deben analizarse como componentes de nuestro sistema de protección.
+
+**¿Cómo afectan las Salvaguardas en el Análisis del Riesgo?**
+
+Las salvaguardas influyen en el cálculo del riesgo de dos maneras:
+
+1. **Reduciendo la probabilidad de las amenazas**: Son las llamadas salvaguardas preventivas. Las ideales logran impedir completamente que la amenaza se materialice.
+2. **Limitando el daño causado**: Algunas salvaguardas limitan directamente la degradación posible, mientras que otras permiten detectar inmediatamente el ataque para frenar su avance. Incluso hay salvaguardas que solo facilitan la recuperación rápida del sistema cuando la amenaza lo daña. En cualquier caso, aunque la amenaza se materialice, sus consecuencias se limitan.
+
+**¿Cómo se miden las Salvaguardas: Eficacia y Madurez?**
+
+Las salvaguardas se caracterizan por su existencia y por su eficacia frente al riesgo que pretenden mitigar. Una salvaguarda ideal es 100% eficaz combinando dos factores: desde el punto de vista técnico:
+
+- es técnicamente idónea para enfrentarse al riesgo que protege.
+- se emplea siempre.
+- está perfectamente desplegada, configurada y mantenida.
+- existen procedimientos claros de uso normal y para incidencias.
+- los usuarios están formados y concienciados.
+- existen controles que alertan de posibles fallos.
+
+La eficacia varía desde el 0% para las salvaguardas inexistentes hasta el 100% para aquellas idóneas y perfectamente implantadas. En cada caso concreto, se estimará un grado de eficacia real. Para evaluar los aspectos organizativos, se puede emplear una escala de madurez que actúe como factor corrector de la confianza que merece el proceso de gestión de la salvaguarda:
+
+![image.png](attachment:973aa5fa-7710-404d-b729-1ce5fe1933a6:image.png)
+
+![image.png](attachment:ec5ed779-fc02-4982-9e68-9e12ccdf1405:image.png)
+
+# **El tratamiento del riesgo**
+
+A la vista de los impactos y riesgos a los que está expuesto el sistema, es necesario tomar decisiones condicionadas por su gravedad y por las obligaciones legales, reglamentarias o contractuales de la Organización.
+
+Pueden surgir consideraciones adicionales sobre la capacidad de la Organización para aceptar ciertos impactos intangibles, como:
+
+- **Imagen pública** de cara a la sociedad (aspectos reputacionales).
+- **Política interna**: relaciones con los empleados, como la capacidad para contratar personal idóneo, retener talento, gestionar rotaciones y ofrecer carreras profesionales atractivas.
+- **Relaciones con los proveedores**: capacidad para alcanzar acuerdos ventajosos a distintos plazos u obtener trato prioritario.
+- **Relaciones con los clientes o usuarios**: capacidad de retención, de ampliar oferta o de diferenciarse frente a la competencia.
+- **Relaciones con otras organizaciones**: capacidad para establecer acuerdos estratégicos o alianzas, así como nuevas oportunidades de negocio que permitan recuperar la inversión en seguridad.
+- **Acceso a sellos o calificaciones** reconocidas de seguridad.
+
+Estas consideraciones conducen a una calificación de cada riesgo significativo, determinando si:
+
+1. **Es crítico** y requiere atención urgente.
+2. **Es grave** y requiere atención.
+3. **Es apreciable** y puede ser objeto de estudio para su tratamiento.
+4. **Es asumible**, lo que significa que no se tomarán acciones para atajarlo. Las opciones 1, 2 y 3 requieren tratamiento técnico del riesgo.
+
+La ***opción 4***, *aceptación del riesgo*, siempre es arriesgada y debe tomarse con prudencia y justificación, ya sea porque el impacto y riesgo residual son asumibles o porque el coste de las salvaguardas apropiadas resulta desproporcionado en comparación con el impacto y riesgo residuales.
+
+![image.png](attachment:4d4a5631-87ae-4fad-bbb4-12683447e988:image.png)
+
+**El Proceso de Evaluación**
+
+El impacto y riesgo residual miden el estado actual del sistema, desde la inseguridad potencial (sin salvaguardas) hasta la implementación de medidas adecuadas que reducen estos valores a niveles aceptables.
+
+Los siguientes párrafos abordan tanto el impacto como el riesgo de manera conjunta.
+
+Cuando el valor residual iguala al valor potencial, significa que las salvaguardas existentes son ineficaces. Esto generalmente no ocurre por una ausencia total de medidas, sino porque faltan elementos fundamentales.
+
+Es crucial entender que un valor residual es simplemente un número. Para interpretarlo correctamente, debe acompañarse de un detalle de las medidas pendientes, es decir, de las vulnerabilidades del sistema. Los responsables de las decisiones deben prestar especial atención a esta lista de tareas pendientes, conocida como "Informe de Insuficiencias" o "Informe de Vulnerabilidades".
+
+---
+
+**Aceptación de los Riesgos**
+
+La Dirección de la Organización debe determinar qué nivel de impacto y riesgo considera aceptable tras el análisis. En otras palabras, debe asumir la responsabilidad de las insuficiencias. Esta no es una decisión técnica, sino política o gerencial, o puede estar determinada por requisitos legales o contractuales. Los niveles de aceptación pueden establecerse por activo individual o por grupos de activos (por departamento, servicio o dimensión).
+
+Cualquier nivel de impacto o riesgo es aceptable siempre que la Dirección lo conozca y lo apruebe formalmente.
+
+Para tomar esta decisión, es necesario considerar los riesgos del sistema de información dentro de un contexto más amplio que evalúe también los aspectos intangibles del negocio.
+
+---
+
+**Tratamiento de los riesgos**
+
+La Dirección puede decidir aplicar distintos tratamientos al sistema de seguridad. Existen dos opciones principales:
+
+- **Reducir** el riesgo residual (aceptar un *menor* riesgo).
+- **Ampliar** el riesgo residual (aceptar un *mayor* riesgo).
+
+*En condiciones de riesgo residual extremo*, prácticamente la única opción viable es reducir el riesgo.
+
+*En condiciones de riesgo residual aceptable*, podemos optar por mantener el nivel actual o ampliar el riesgo asumido. En cualquier caso, es imprescindible mantener una monitorización continua para asegurar que el riesgo formal coincida con la experiencia real y poder reaccionar ante cualquier desviación significativa.
+
+*En condiciones de riesgo residual medio*, conviene evaluar otros factores como el impacto en pérdidas y ganancias, o analizar las prácticas del sector para establecer comparativas.
+
+**Eliminación del Riesgo**
+
+La eliminación de la fuente de riesgo es una opción viable frente a un riesgo inaceptable. En un sistema podemos eliminar diversos elementos, siempre que no afecten a la esencia de la organización. Es extremadamente raro poder prescindir de la información o los servicios esenciales, ya que constituyen la misión misma de la organización. Resulta más factible prescindir de componentes no esenciales que, aunque implementan la misión, no son parte constituyente de ella. Esta opción puede adoptar diferentes formas:
+
+- **Eliminar cierto tipo de activos**, sustituyéndolos por otros. Por ejemplo: cambiar de sistema operativo o de fabricante de equipos.
+- **Reordenar la arquitectura del sistema** (el esquema de dependencias) para modificar el valor acumulado en activos expuestos a grandes amenazas. Por ejemplo: segregar redes o desdoblar equipos para atender necesidades específicas, alejando lo más valioso de lo más expuesto.
+
+Las decisiones de eliminación de las fuentes de riesgo requieren realizar un nuevo análisis de riesgos sobre el sistema modificado.
+
+---
+
+**Mitigación del Riesgo**
+
+La mitigación del riesgo contempla dos opciones principales:
+
+- **Reducir la degradación** causada por una amenaza (también conocido como "acotar el impacto").
+- **Reducir la probabilidad** de que una amenaza se materialice.
+
+Ambos enfoques requieren ampliar o mejorar el conjunto de salvaguardas, lo que en términos de madurez significa subir de nivel.
+
+Algunas salvaguardas implican desplegar más equipamiento. Estos nuevos activos estarán sujetos a sus propias amenazas que podrían afectar a los activos esenciales.
+
+Es necesario repetir el análisis de riesgos, incluyendo el nuevo despliegue de medios, y confirmar que el riesgo del sistema ampliado es menor que el del sistema original.
+
+---
+
+**Compartición del Riesgo**
+
+Existen dos formas básicas de compartir riesgo:
+
+1. **Riesgo cualitativo**: se comparte mediante la externalización de componentes del sistema, repartiendo responsabilidades técnicas (para quien opera el componente) y legales (según el acuerdo establecido en la prestación del servicio).
+2. **Riesgo cuantitativo**: se comparte mediante seguros, donde el tomador paga una prima para reducir el impacto de posibles amenazas, mientras el asegurador asume las consecuencias.
+
+Existe una amplia variedad de tipos y cláusulas de seguros para definir el grado de responsabilidad de cada parte.
+
+Al compartir riesgos cambia el conjunto de componentes del sistema o su valoración, lo que requiere un nuevo análisis del sistema resultante.
+
+---
+
+**Financiación del Riesgo**
+
+Cuando una organización acepta un riesgo, es recomendable reservar fondos para responder a las consecuencias si este se materializa. Estos "fondos de contingencia" pueden formar parte de los contratos de aseguramiento. Normalmente, esta opción no modifica el sistema, por lo que el análisis de riesgos existente sigue siendo válido.
+
+# **Octave**
+
+Al hablar de **riesgo**, debemos hablar también de metodologías. El riesgo se define como la probabilidad de que ocurra un evento, algo que puede ser previsto y evitado. Las amenazas y vulnerabilidades por separado no suelen presentar daños de gran magnitud; sin embargo, cuando se combinan, la probabilidad de daño aumenta significativamente. El riesgo informático evoluciona a la par de la tecnología, y cada día surgen más vulnerabilidades y amenazas que ponen en peligro la información.
+
+Una buena gestión de riesgo en la seguridad de la información organizacional requiere una inversión considerable de **tiempo, esfuerzo y dedicación**. Por lo general, las organizaciones que comprenden el valor sustancial de sus activos y desean invertir en gestionar sus vulnerabilidades, deben implementar un sistema de gestión basado en políticas, procesos, recursos, documentación y estructura organizacional. Todos estos elementos combinados permiten planificar, desarrollar, controlar y tomar acciones efectivas.
+
+Además, este enfoque suele alinearse con las normas de la familia ISO 27005. Es importante entender que la implementación de una gestión de riesgos no solo protege los activos de información, sino que también asegura que la organización cumpla su misión. La gestión se define como un ciclo reiterativo que identifica, evalúa y ejecuta. El proceso para la gestión de riesgo está conformado por 5 procesos, los cuales se describen a continuación:
+
+![image.png](attachment:15cca44f-dfb8-4239-836f-eb79112e3519:image.png)
+
+1. **Establecimiento del Contexto**: Este proceso contextualiza el entorno empresarial, recopilando toda la información relevante de la organización.
+2. **Evaluación de Riesgos**: Este proceso comprende 3 subprocesos: **identificación**, **revisión** y *control de riesgos*. Identifica riesgos de forma **cuantitativa** y **cualitativa**, priorizándolos según criterios alineados con los objetivos organizacionales. Esto permite determinar qué podría generar pérdidas significativas y dónde podrían ocurrir. El proceso finaliza comparando los niveles de riesgo con los criterios de aceptación, generando un listado priorizado de vulnerabilidades y amenazas. La evaluación se completa con una interpretación mediante la *Matriz de análisis*, que relaciona la probabilidad de riesgo con la magnitud del daño (valores del 1 al 4), o clasifica el riesgo como bajo, moderado, importante o crítico frente a sus consecuencias. Para este proceso se implementan metodologías específicas de evaluación.
+3. **Tratamiento de los Riesgos**: Este proceso desarrolla medidas de seguridad para reducir o evitar los riesgos y crear planes de contingencia.
+4. **Consulta de Riesgos**: Este proceso comunica los riesgos existentes a todas las partes interesadas de la organización.
+5. **Monitorización de Riesgos**: Este proceso supervisa las medidas de seguridad implementadas para verificar su correcto funcionamiento y eficacia. Posteriormente se realizan auditorías internas, documentando todo el proceso y evaluando sus resultados.
+
+Con el paso de los años, la tecnología ha evolucionado, así como los métodos para vulnerar los sistemas de información. Como respuesta, las normas y modelos para la gestión de riesgo también han evolucionado, implementando diversas metodologías. Entre las muchas existentes, analizaremos: **OCTAVE** y **MAGERIT**.
+
+**Metodología Octave**
+
+Es una técnica de evaluación de riesgos desarrollada por el SEI (Software Engineering Institute) en Estados Unidos. Reconocida mundialmente, ha tenido excelente adaptación aunque sus fases la hacen algo más compleja que otras metodologías.
+
+A diferencia de otras metodologías centradas en la tecnología, Octave se enfoca en el riesgo. Al implementarla, personal de diversos departamentos (operativo, tecnología, entre otros) trabaja conjuntamente orientado a las necesidades de seguridad, con el apoyo de un especialista. Es importante destacar que esta metodología fue diseñada para organizaciones con más de 300 empleados y se divide en tres etapas, como se muestra en la siguiente figura.
+
+![image.png](attachment:6295b3d7-539e-41f4-8b17-0687bdf102d3:image.png)
+
+**Fase 1: *Build Asset-Based Threat Profiles***: Desarrolla perfiles de amenazas basados en los activos, identificando bienes, amenazas, prácticas actuales, vulnerabilidades y recursos de seguridad de la compañía.
+
+**Fase 2: *Identify Infrastructure Vulnerabilities***: Identifica las vulnerabilidades de la infraestructura, centrándose en los componentes clave y sus correspondientes vulnerabilidades técnicas.
+
+**Fase 3: *Develop Security Strategy and Plans***: Desarrolla estrategias y planes de seguridad basados en los riesgos identificados, la estrategia de protección y los planes de mitigación.
+
+***Build asset-based threat profiles - Generar perfiles de activos basados en la amenaza***
+
+En esta fase se realiza un análisis para identificar los activos más importantes para la organización y evaluar qué se está haciendo actualmente para protegerlos. Comprende los siguientes cuatro procesos:
+
+***1. Identify enterprise knowledge - Identificar el conocimiento de la empresa***
+
+El objetivo de este proceso es identificar la perspectiva de los directivos. Para ello se utilizan diversas entradas: cuestionarios de activos, perfiles genéricos de amenazas, catálogos de amenazas, prácticas organizacionales, datos estructurales (organigrama, políticas, procedimientos) y regulaciones aplicables. El resultado será una lista priorizada de activos con sus valores relativos, perfil de amenazas, estrategia de protección actual, indicadores de riesgo y áreas operacionales a evaluar, todo desde la perspectiva gerencial.
+
+Este proceso está compuesto por cinco actividades que se describen a continuación:
+
+***Characterize key enterprise assets** – Identificar los activos clave de la empresa:*Responde a la pregunta: "¿Qué está intentando proteger?".Dependiendo del conocimiento que la alta gerencia tenga de la empresa y del cuestionario que se les realice. Se obtendrá la lista de los activos que identifican como importantes, con sus respectivos valores relativos para la dirección de la compañía.
+
+- ***Characterize key enterprise assets** – Identificar los activos clave de la empresa:*
+Responde a la pregunta: "*¿Qué está intentando proteger?*".
+Dependiendo del conocimiento que la alta gerencia tenga de la empresa y del cuestionario realizado, se obtendrá una lista de activos importantes con sus respectivos valores relativos para la dirección.
+- ***Describe threats to assets** – Describir las amenazas de los activos:*
+"*¿De qué está intentando proteger sus activos?*" es la cuestión central de esta actividad. El conocimiento que la directiva tiene sobre las amenazas que afectan a los activos es crucial para adquirir el perfil de amenaza empresarial desde el enfoque directivo.
+- ***Describe current and planned strategy to protect assets** – Describir la estrategia actual y planificada para proteger los activos:*
+Se evalúa el conocimiento que la dirección tiene sobre prácticas y políticas actuales o planificadas para la protección de bienes.
+La pregunta clave es: "*¿Qué está haciendo actualmente para proteger sus activos?*". El resultado es la identificación de la estrategia de protección empresarial actual desde la perspectiva de la alta gerencia.
+- ***Identify risk indicators** – Identificar los indicadores de riesgo:*
+Esta actividad produce indicadores de riesgo empresarial basados en las preocupaciones de la alta gerencia. Se apoya en cuestionarios sobre buenas prácticas técnicas, capacitaciones organizacionales, documentación de políticas y procedimientos, así como leyes y regulaciones aplicables. La pregunta fundamental es: "*¿Qué brechas en su estrategia de protección actual están poniendo sus activos en riesgo?*".
+- ***Select operational areas to evaluate** – Seleccionar áreas operativas para evaluar:*
+Esta actividad responde a dos preguntas clave: "*¿Qué áreas operativas o funciones de soporte están involucradas con los activos clave identificados?*" y "*¿Quiénes son los gerentes clave de esas áreas operativas o funciones de apoyo?*". El resultado es la identificación de áreas prioritarias para evaluación.
+
+***2. Identify operational area knowledge - Identificar el conocimiento del área operativa***
+
+Este proceso se basa en el conocimiento de los gerentes del área operacional, utilizando cuestionarios de activos, perfiles de amenazas, estrategias de protección, datos organizacionales y regulaciones aplicables. También considera la lista de activos empresariales priorizados por los jefes de área operativa.
+
+El resultado incluye una lista priorizada de activos del área operativa, un mapa que relaciona los activos identificados por la gerencia con los identificados por el área operativa, un perfil de amenazas, la estrategia actual de protección, indicadores de riesgo y la identificación del personal que debe ser evaluado. A continuación se describen las actividades correspondientes.
+
+***Characterize key operational área assets** – Caracterizar los activos clave del área operativa:*Los gerentes de área responden: "¿Qué está intentando proteger?". Depende del conocimiento que se tenga sobre los activos concernientes para obtener la lista de estos.
+
+- ***Characterize key operational area assets** – Caracterizar los activos clave del área operativa:*
+Los gerentes de área responden: "*¿Qué está intentando proteger?*". La lista de activos obtenida dependerá del conocimiento que se tenga sobre los elementos relevantes para esta área.
+- ***Characterize assets in relation to enterprise assets** – Caracterizar los activos en relación con los activos de la empresa:*
+Se establece la relación con los activos identificados en el proceso 1, preguntando: "*¿Cuál es la relación entre los activos que ha identificado y los que ha identificado la alta gerencia?*". El resultado es la documentación de estas relaciones.
+- ***Describe threats to assets** – Describir las amenazas a los activos:*
+"*¿De qué está tratando de proteger sus activos?*" es la pregunta central. Basándose en el conocimiento de los gerentes operacionales sobre las amenazas y con un perfil genérico de estas, se obtiene el perfil de amenazas desde la perspectiva del área operacional.
+- ***Describe current and planned strategy to protect assets** – Describir la estrategia actual y planificada para proteger los activos:*
+Los gerentes de área comparten las buenas prácticas técnicas, formación, políticas y procedimientos de la empresa, así como las regulaciones aplicables, respondiendo a: "*¿Qué está haciendo para proteger sus activos?*". Esto permite obtener la estrategia de protección del área operativa.
+- ***Identify risk indicators** – Identificar indicadores de riesgo:*
+Considerando el entrenamiento en seguridad, los programas de concientización y la documentación de políticas y procedimientos, se responde a: "*¿Qué brechas en su estrategia de protección actual están poniendo sus activos en riesgo?*". El resultado revela los indicadores de riesgo del área operacional y las preocupaciones sobre la exposición de sus activos.
+- ***Select staff to evaluate** – Seleccionar personal para evaluar:*
+Esta actividad utiliza la información recopilada previamente para identificar líderes o miembros clave que deben ser evaluados. La pregunta fundamental es: "*¿Quiénes son los miembros clave?*".
+
+***3. Identify staff knowledge - Identificar el conocimiento del personal***
+
+Este proceso detalla las entradas y salidas correspondientes a esta fase de la metodología.
+
+Las entradas incluyen el conocimiento actual del personal, cuestionarios de activos, perfiles de amenazas, estrategias de protección, prácticas organizacionales, datos estructurales y regulaciones aplicables, además de las listas de activos previamente identificadas. Los resultados obtenidos son la lista de activos identificados por el personal, un mapa comparativo de los activos en los diferentes niveles, el perfil de amenazas, la estrategia de protección actual y los indicadores de riesgo desde esta perspectiva.
+
+**A continuación, se describen las actividades que se contemplan:**
+
+***Characterize key staff assets** – Caracterizar los activos clave del personal:*"¿Qué está tratando de proteger?" es lo que debe responder el personal en esta actividad, la respuesta dependerá de su conocimiento con respecto a los activos, por medio de un cuestionario. Y de esta forma se consigue la lista priorizada de los activos importantes para el personal.
+
+- ***Characterize key staff assets** – Caracterizar los activos clave del personal:*
+"*¿Qué está tratando de proteger?*" es la pregunta que debe responder el personal. Sus respuestas, obtenidas mediante cuestionarios, dependerán de su conocimiento sobre los activos. Esto permite conseguir una lista priorizada de los activos importantes desde su perspectiva.
+- ***Characterize assets in relation to operational area and enterprise assets** – Caracterizar los activos en relación con el área operacional y los activos de la empresa:*
+Se relacionan los activos previamente identificados como importantes con los que el personal establece como prioritarios. La pregunta clave es: "*¿Cuáles son las relaciones entre los activos identificados por el personal, los del área operacional y los de la alta gerencia?*". El objetivo es documentar estas conexiones.
+- ***Describe threats to assets** – Describir las amenazas de los activos:*
+La cuestión central es: "*¿De qué está tratando de proteger sus activos?*". Las respuestas se basarán en el perfil genérico de amenazas y el conocimiento del personal, permitiendo obtener un perfil de amenazas desde su perspectiva.
+- ***Describe current and planned strategy to protect assets** – Describir la estrategia y planificación para proteger los activos:*
+La pregunta fundamental es: "*¿Debe implementarse y monitorearse la estrategia planteada para asegurar su efectividad?*".
+- ***Create Threat Profile** – Creación de Perfiles de Amenazas:*
+Este proceso integra toda la información recopilada en los procesos anteriores para crear perfiles de amenazas para los activos críticos. Generalmente, este procedimiento es gestionado por el equipo de análisis.
+
+***4. Identify Technological Vulnerabilities - Identificar vulnerabilidades tecnológicas***
+
+Para esta fase se contemplan los siguientes procesos:
+
+1. ***Identificación de los componentes clave***: Este proceso selecciona los componentes específicos que serán analizados en busca de vulnerabilidades tecnológicas, identificando los principales sistemas tecnológicos y los activos críticos.
+2. ***Evaluación de componentes***: Con los componentes seleccionados, se evalúan las vulnerabilidades utilizando herramientas específicas. El equipo de análisis ejecuta estas herramientas y posteriormente analiza los resultados. Una ejecución correcta de este proceso puede mitigar significativamente el impacto de las amenazas.
+
+***5. Develop Security Strategy and Plans***
+
+Esta fase se caracteriza por el manejo de los procesos de análisis de riesgo y el desarrollo de una estrategia de contingencia.
+
+***Análisis de Riesgo**: Proceso que estudia el impacto de las amenazas a los activos críticos, evalúa y establece criterios para la evaluación de los riesgos.* ***Desarrollo de una estrategia de protección**: El equipo de análisis crea una estrategia para proteger los activos con el objetivo de contrarrestar o evitar el impacto de las amenazas, basándose en la información recolectada anteriormente.*
+
+- ***Análisis de Riesgo***: Proceso que estudia el impacto de las amenazas a los activos críticos, evalúa y establece criterios para la evaluación de los riesgos.
+- ***Desarrollo de una estrategia de protección***: El equipo de análisis crea una estrategia para proteger los activos con el objetivo de contrarrestar o evitar el impacto de las amenazas, basándose en la información recolectada anteriormente.
+
+Es importante considerar que, según las necesidades y el tamaño de cada organización, se diseñaron 3 métodos OCTAVE para satisfacer estos requerimientos.
+
+Esta metodología está compuesta por una serie de talleres y programas realizados por la propia organización, aprovechando los conocimientos internos de todos sus niveles. El equipo se enfoca en identificar los puntos críticos, posibles amenazas y vulnerabilidades tanto físicas como lógicas que afecten a la organización, para luego desarrollar la estrategia a implementar.
+
+Las fases en las que trabaja esta metodología son:
+
+***Fase de análisis de Riesgo***
+
+Esta fase permite determinar 3 variables: [9]
+
+*¿Cuál es? ¿Cuánto vale? ¿Cómo se protege?*
+
+- *¿Cuál es?*
+- *¿Cuánto vale?*
+- *¿Cómo se protege?*
+
+***MÉTODO OCTAVE-S:***
+
+Operationally Critical Threat, Asset and Vulnerability Evaluation for Small Organization, fue desarrollado para implementarse en organizaciones pequeñas de 100 personas o menos. Utiliza un proceso más simplificado que el OCTAVE original, pero mantiene los mismos resultados. Las dos principales diferencias de este método con el original son:
+
+- Requiere un grupo de 3 a 5 personas que conozcan a profundidad el funcionamiento de la empresa.
+- Realiza solo un análisis superficial de la infraestructura informática.
+
+***MÉTODO OCTAVE-ALLEGRO***
+
+Es una simplificación del método original y está enfocado exclusivamente en los activos de la organización. Es ideal cuando se desea gestionar una evaluación de riesgo con mínima participación del personal de la empresa. Está conformado por 8 pasos organizados en 4 fases [5][6], que son:
+
+***Fase 1**:* Evaluación de los participantes desarrollando criterios de medición de riesgo.
+
+***Fase 2**:* Creación por los participantes de un perfil de activos críticos.
+
+***Fase 3**:* Los participantes identifican las amenazas a cada uno de los activos.
+
+***Fase 4**:* Los participantes identifican y analizan las amenazas y desarrollan planes de contingencia.
+
+# **Introducción a los marcos legales y normativos**
+
+Los marcos legales y normativos en ciberseguridad constituyen la base para proteger la información y los sistemas contra amenazas y ataques.
+
+Aunque estos marcos varían según el país, comparten objetivos comunes: protección de datos personales, seguridad en infraestructuras críticas y prevención del cibercrimen.
+
+**Es importante distinguir entre estos conceptos:**
+
+- **Ley:** Norma jurídica dictada por una autoridad competente de cumplimiento obligatorio.
+- **Regulación:** Conjunto de reglas específicas que desarrolla y complementa una ley, detallando su aplicación en situaciones concretas.
+- **Directiva:** Mandato emitido por una entidad supranacional, como la Unión Europea, que debe incorporarse a las legislaciones nacionales de los Estados miembros.
+- **Normativa:** Término general que abarca leyes, regulaciones y directivas que rigen un área específica, como la ciberseguridad.
+
+**Ejemplos**:
+
+- **GDPR (Reglamento General de Protección de Datos) (Regulación):** Protege los datos personales de los ciudadanos de la UE.
+- **Ley de Infraestructuras Críticas en Estados Unidos (Ley):** Obliga a sectores clave a implementar medidas de seguridad.
+- **NIS2 (Directiva):** Directiva de la Unión Europea que establece requisitos más estrictos para la seguridad de redes y sistemas en sectores críticos, aplicable a todos los Estados miembros.
+
+# **Reglamentos internacionales y regionales**
+
+Las regulaciones internacionales y regionales buscan **armonizar** las medidas de seguridad entre países y regiones. Estos marcos establecen una base común para las organizaciones, garantizando coherencia en la implementación de la ciberseguridad.
+
+Ofrecen metodologías estructuradas para gestionar **riesgos**, implementar **controles** efectivos y asegurar el **cumplimiento** de los **estándares** de seguridad.
+
+Al promover la **uniformidad en las prácticas de seguridad**, estas regulaciones fortalecen la confianza y cooperación entre organizaciones que operan globalmente. También facilitan la respuesta a amenazas emergentes mediante un enfoque proactivo y estandarizado, permitiendo a las organizaciones mantener su resiliencia y proteger datos sensibles eficazmente.
+
+Estas normativas son esenciales para asegurar que todas las entidades, sin importar su ubicación geográfica, mantengan un **nivel de seguridad consistente**, reduciendo vulnerabilidades y mejorando la estabilidad del entorno digital.
+
+Por ejemplo, el [**ISO/IEC 27001**](https://www.iso.org/standard/27001) permite que empresas de diferentes países implementen controles de seguridad estandarizados, facilitando la colaboración en proyectos internacionales y aumentando la confianza en la protección de datos compartidos.
+
+![image.png](attachment:ce70dd75-01b4-4d44-8f27-b012d4be9cad:image.png)
+
+**Ejemplos:**
+
+- **ISO/IEC 27001:** Estándar internacional para sistemas de gestión de seguridad de la información.
+- **PCI DSS:** Normativa para la protección de datos en transacciones con tarjetas de crédito.
+
+# **Normas específicas para sectores críticos**
+
+Los sectores como salud, banca y energía cuentan con normas específicas debido a la sensibilidad de sus datos. Estas regulaciones no solo protegen información crítica, sino que también garantizan la continuidad operativa y mantienen la confianza de los usuarios.
+
+En el sector salud, la privacidad de los pacientes es prioritaria, por lo que normativas como **HIPAA** establecen controles estrictos sobre la información médica.
+
+En el ámbito financiero, regulaciones como **SOX** aseguran la precisión y transparencia en los informes financieros, reduciendo así el riesgo de fraude.
+
+En el sector energético, las guías de [**ENISA**](https://www.enisa.europa.eu/) promueven la ciberresiliencia, asegurando la estabilidad de infraestructuras esenciales frente a ciberataques.
+
+- HIPAA (Health Insurance Portability and Accountability Act): Regula la privacidad de la información médica en EE. UU.
+- SOX (Sarbanes-Oxley Act): Obliga a empresas públicas a garantizar la precisión de su información financiera.
+- Regulaciones de la Agencia Europea de Ciberseguridad (ENISA): Guía para sectores energéticos y telecomunicaciones.
+
+Estas normativas se revisan y actualizan regularmente para responder a amenazas emergentes y avances tecnológicos. Por ejemplo, la Agencia Europea de Ciberseguridad (ENISA) ofrece recomendaciones adaptadas a nuevas vulnerabilidades y métodos de ataque, garantizando que **las medidas de seguridad evolucionen junto con el panorama de riesgos**.
+
+Este **enfoque proactivo** permite a las empresas mantener la continuidad de sus operaciones y proteger tanto sus activos digitales como la confianza del público.
+
+# **Evaluación de cumplimiento y auditorías**
+
+Para garantizar el cumplimiento, las empresas deben realizar evaluaciones y auditorías periódicas.
+
+Las evaluaciones de **riesgo** deberían realizarse al menos anualmente, mientras que las auditorías **internas** pueden efectuarse semestralmente y las **externas** anualmente o según la complejidad y **modificaciones** de los sistemas.
+
+Estas revisiones identifican vulnerabilidades y aseguran la correcta aplicación de las políticas de seguridad. Es recomendable cambiar periódicamente de proveedor de auditorías externas para obtener **diferentes perspectivas** sobre la seguridad de la organización y mejorar los controles existentes.
+
+***Dato interesante: Diferencia entre auditoría y test de intrusión***
+
+1. ***Auditoría:** Evaluación metódica y procedimentada de los controles y procesos de seguridad con el fin de verificar su eficacia y cumplimiento con normativas.*
+2. ***Test de intrusión:** Simulación controlada de un ataque con el fin de identificar vulnerabilidades específicas en sistemas o redes.*

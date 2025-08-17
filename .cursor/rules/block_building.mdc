@@ -1,0 +1,64 @@
+---
+description: 
+globs: 
+alwaysApply: true
+---
+---
+description: Guidelines for block-by-block development clearly documenting module interactions and dependencies with highlighted changes.
+globs: architecture/**/*.md, diagrams/**/*.md, architecture/**/*.txt
+alwaysApply: true
+---
+
+- **Block-by-Block Development:**
+  - Clearly define individual blocks or modules before implementation.
+  - Focus entirely on completing and validating one block before starting another.
+
+- **Architecture Visualization:**
+  - Simultaneously create clear architectural diagrams showing each block's structure.
+  - Explicitly indicate interactions and data flow between blocks.
+
+  ```markdown
+  +--------------------------+        +------------------------+
+  |       Module A           |------->|       Module B         |
+  |--------------------------|        |------------------------|
+  | - Core functionality     |        | - Dependent features   |
+  | - Data processing        |        | - Receives processed   |
+  +--------------------------+        +------------------------+
+  ```
+
+- **Relationship Clarity:**
+  - Clearly label relationships between modules in the diagrams.
+  - Indicate clearly which blocks are affected by changes in other blocks.
+
+- **Impact Management:**
+  - When modifying a block, explicitly identify and review all impacted related blocks.
+  - Immediately document and visualize changes in relationships.
+
+- **Change Highlighting:**
+  - Clearly highlight in special colors the files and related flows touched during each development step.
+  - Document these highlights specifically in the `architecture.txt` file.
+
+  ```markdown
+  # ✅ DO: Highlight modified components
+  [Module A]---(Modified)---[Module B]
+
+  # ❌ DON'T: Ignore highlighting changes
+  Module A --> Module B
+  ```
+
+- **Error Prevention:**
+  - Always cross-check the functionality of related blocks after modifications.
+  - Avoid introducing new errors by reviewing the complete set of interconnected blocks.
+
+- **Consistent Documentation:**
+  - Update documentation in parallel with development progress.
+  - Clearly document block status, relationships, and dependencies.
+
+- **Continuous Validation:**
+  - Regularly validate each block's functionality against the diagrammed architecture.
+  - Confirm visual diagrams match implemented architecture exactly.
+
+- **Regular Maintenance:**
+  - Regularly review, maintain, and update architectural diagrams.
+  - Ensure diagrams reflect the current, actual state of the project precisely.
+

@@ -1,0 +1,67 @@
+---
+description: 
+globs: 
+alwaysApply: true
+---
+---
+description: Guidelines for logging and managing Scrum tasks effectively for Jira integration.
+globs: tasks/**/*.md, jira/**/*.md
+alwaysApply: true
+---
+
+- **Task Logging Structure:**
+  - Each task entry must contain:
+    - **Date**: YYYY-MM-DD
+    - **Description**: Clear and concise explanation of the task
+    - **Assigned User**: Username or identifier
+    - **Time Spent**: Hours and minutes (e.g., 1h 30m)
+    - **Effort Estimate**: Scrum story points or effort estimation
+
+  ```markdown
+  - **Date**: 2024-04-17
+  - **Description**: Implemented user authentication module
+  - **Assigned User**: jdoe
+  - **Time Spent**: 2h 45m
+  - **Effort Estimate**: 5 points
+  ```
+
+- **Consistency and Clarity:**
+  - Task descriptions must clearly state the deliverable or action performed
+  - Avoid vague or ambiguous language
+  
+  ```markdown
+  # ✅ DO: Explicit description
+  - **Description**: Fixed login validation error on user input
+
+  # ❌ DON'T: Ambiguous description
+  - **Description**: Worked on login issue
+  ```
+
+- **Effort Estimation:**
+  - Standardize effort estimation using Fibonacci sequence (e.g., 1, 2, 3, 5, 8, 13)
+  - Consistently apply estimation scale across tasks
+
+- **Time Tracking:**
+  - Log actual time spent in hours and minutes
+  - Update immediately upon task completion to ensure accuracy
+
+- **User Assignment:**
+  - Clearly specify the assigned user's username or identifier
+  - Confirm user accountability for the task
+
+- **Jira Integration:**
+  - Ensure task entries match corresponding Jira issues or stories
+  - Include Jira issue ID when applicable for cross-referencing
+
+  ```markdown
+  - **Jira Issue ID**: PROJ-123
+  ```
+
+- **Task Updates and Revisions:**
+  - Update task records promptly upon changes in status, scope, or effort
+  - Clearly document reason for any significant updates or adjustments
+
+- **Review and Maintenance:**
+  - Regularly review logged tasks for completeness and accuracy
+  - Maintain task logs in sync with Jira for reporting and analysis
+

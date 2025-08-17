@@ -1,0 +1,135 @@
+{
+    "incidentes": [
+        {
+            "id": "INC-001",
+            "titulo": "Exposición de Credenciales en Redes Sociales",
+            "descripcion": "Un empleado subcontratado del equipo de TI publicó una foto en LinkedIn donde se podían ver las credenciales de acceso remoto en una nota pegada en su portátil. La imagen mostraba claramente el usuario y contraseña de acceso al sistema.",
+            "fecha": "2023-07-25",
+            "hora": "18:30",
+            "tipo": "exposicion_credenciales",
+            "severidad": "alta"
+        },
+        {
+            "id": "INC-002",
+            "titulo": "Ataque de Phishing a Tesorería",
+            "descripcion": "Un empleado del departamento de tesorería recibió un correo electrónico supuestamente del CEO solicitando una transferencia urgente de 3.500.000€. El correo provenía de la dirección cr4ck.100@irnini.com y la IP 79.3.190.255. El empleado realizó la transferencia sin verificación adicional.",
+            "fecha": "2023-08-15",
+            "hora": "11:45",
+            "tipo": "phishing",
+            "severidad": "critica"
+        },
+        {
+            "id": "INC-003",
+            "titulo": "Fuga de Datos de Clientes",
+            "descripcion": "Se detectó que un archivo con datos sensibles de clientes fue enviado a una dirección de correo externa (cr4ck.100@irnini.com). El archivo contenía información personal, datos de contacto y detalles de contratos.",
+            "fecha": "2023-03-10",
+            "hora": "14:20",
+            "tipo": "fuga_datos",
+            "severidad": "alta"
+        },
+        {
+            "id": "INC-004",
+            "titulo": "Ataque a Pantallas Internas",
+            "descripcion": "Las pantallas de todas las sedes mostraron un mensaje no autorizado ofreciendo pases gratuitos para la piscina. El mensaje fue enviado desde una IP interna comprometida.",
+            "fecha": "2023-07-25",
+            "hora": "18:30",
+            "tipo": "compromiso_sistema",
+            "severidad": "media"
+        },
+        {
+            "id": "INC-005",
+            "titulo": "Acceso No Autorizado a Base de Datos",
+            "descripcion": "Se detectó un acceso no autorizado a la base de datos de empleados desde una IP externa. El atacante utilizó credenciales robadas para acceder a información sensible.",
+            "fecha": "2023-09-01",
+            "hora": "03:15",
+            "tipo": "acceso_no_autorizado",
+            "severidad": "alta"
+        }
+    ],
+    "categorias": {
+        "exposicion_credenciales": {
+            "titulo": "Exposición de Credenciales",
+            "ejemplos": [
+                {
+                    "id": "CRED-001",
+                    "titulo": "Credenciales en Redes Sociales",
+                    "descripcion": "Un empleado subcontratado del equipo de TI publicó una foto en LinkedIn donde se podían ver las credenciales de acceso remoto en una nota pegada en su portátil. La imagen mostraba claramente el usuario y contraseña de acceso al sistema."
+                },
+                {
+                    "id": "CRED-002",
+                    "titulo": "Post-it con Contraseñas",
+                    "descripcion": "Se encontraron varias notas adhesivas con contraseñas pegadas en monitores y bajo teclados durante una auditoría de seguridad física."
+                },
+                {
+                    "id": "CRED-003",
+                    "titulo": "Compartir Credenciales por Email",
+                    "descripcion": "Un empleado compartió sus credenciales de acceso por correo electrónico con un compañero para que pudiera realizar una tarea en su ausencia."
+                },
+                {
+                    "titulo": "Credenciales de GitHub expuestas",
+                    "descripcion": "Un desarrollador subió accidentalmente un archivo .env con credenciales de producción a un repositorio público de GitHub."
+                },
+                {
+                    "titulo": "Contraseña en código fuente",
+                    "descripcion": "Se encontró una contraseña hardcodeada en el código fuente de una aplicación web."
+                }
+            ]
+        },
+        "phishing": {
+            "titulo": "Ataques de Phishing",
+            "ejemplos": [
+                {
+                    "id": "PHISH-001",
+                    "titulo": "Phishing a Tesorería",
+                    "descripcion": "Un empleado del departamento de tesorería recibió un correo electrónico supuestamente del CEO solicitando una transferencia urgente de 3.500.000€. El correo provenía de la dirección cr4ck.100@irnini.com y la IP 79.3.190.255."
+                },
+                {
+                    "id": "PHISH-002",
+                    "titulo": "Phishing de Credenciales",
+                    "descripcion": "Varios empleados recibieron un correo aparentemente del departamento de TI solicitando que actualizaran sus credenciales haciendo clic en un enlace."
+                },
+                {
+                    "id": "PHISH-003",
+                    "titulo": "Phishing de Documentos",
+                    "descripcion": "Un empleado recibió un correo con un documento adjunto que parecía ser una factura importante. Al abrirlo, se activó un malware que comprometió su equipo."
+                },
+                {
+                    "titulo": "Correo de suplantación de CEO",
+                    "descripcion": "Un empleado recibió un correo electrónico que parecía ser del CEO solicitando una transferencia urgente de fondos."
+                },
+                {
+                    "titulo": "Phishing de credenciales de Office 365",
+                    "descripcion": "Empleados recibieron correos falsos solicitando que actualicen sus credenciales de Office 365."
+                }
+            ]
+        },
+        "fuga_datos": {
+            "titulo": "Fuga de Datos",
+            "ejemplos": [
+                {
+                    "id": "LEAK-001",
+                    "titulo": "Fuga de Datos de Clientes",
+                    "descripcion": "Se detectó que un archivo con datos sensibles de clientes fue enviado a una dirección de correo externa. El archivo contenía información personal, datos de contacto y detalles de contratos."
+                },
+                {
+                    "id": "LEAK-002",
+                    "titulo": "Acceso No Autorizado a Base de Datos",
+                    "descripcion": "Un ex-empleado mantuvo acceso a la base de datos de clientes y extrajo información confidencial antes de que se desactivaran sus credenciales."
+                },
+                {
+                    "id": "LEAK-003",
+                    "titulo": "Dispositivo Perdido con Datos Sensibles",
+                    "descripcion": "Un portátil de la empresa con información sensible de clientes fue robado. El dispositivo no tenía cifrado de disco y las credenciales estaban guardadas en el navegador."
+                },
+                {
+                    "titulo": "Base de datos expuesta",
+                    "descripcion": "Una base de datos de MongoDB quedó expuesta en Internet sin autenticación."
+                },
+                {
+                    "titulo": "Filtración de datos de clientes",
+                    "descripcion": "Un archivo CSV con información de clientes fue compartido accidentalmente en un foro público."
+                }
+            ]
+        }
+    }
+} 

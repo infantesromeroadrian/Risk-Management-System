@@ -1,0 +1,41 @@
+---
+description: 
+globs: 
+alwaysApply: true
+---
+---
+description: Guidelines for documenting each code change in a CSV format compatible with Jira imports.
+globs: logs/**/*.csv, jira/**/*.csv
+alwaysApply: true
+---
+
+- **CSV Logging Structure:**
+  - Each code change must be documented with the following Jira-compatible fields:
+    - **Issue Key**: Jira issue identifier (optional if creating new)
+    - **Summary**: Concise title of the code change
+    - **Description**: Detailed explanation of the change
+    - **Date**: Date of change (YYYY-MM-DD)
+    - **User**: Username or identifier responsible for the change
+    - **Time Spent**: Actual time spent implementing the change (e.g., 1h 30m)
+    - **Story Points**: Effort estimation using Scrum points
+    - **Status**: Jira status (e.g., "Done", "In Progress", "To Do")
+
+- **Example Entry:**
+
+  ```csv
+  Issue Key,Summary,Description,Date,User,Time Spent,Story Points,Status
+  PROJ-101,Update login validation,"Corrected validation logic to handle empty inputs.",2024-04-17,jdoe,2h,3,Done
+  ```
+
+- **Accuracy and Consistency:**
+  - Clearly and accurately document every field to reflect the exact nature of the change.
+  - Ensure uniform formatting throughout the CSV file to facilitate Jira imports without errors.
+
+- **Immediate Logging:**
+  - Document changes in real-time, immediately after the implementation.
+  - Regularly review entries for completeness and correctness.
+
+- **Maintenance and Audit:**
+  - Regularly audit CSV logs to verify accuracy and compliance.
+  - Ensure CSV files remain synchronized with actual Jira project status for accurate reporting.
+

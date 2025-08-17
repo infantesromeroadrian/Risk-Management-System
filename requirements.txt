@@ -1,0 +1,52 @@
+# ===================================================================
+# Risk-Guardian Dependencies - Sistema Unificado
+# Incluye dependencias originales + LangChain + GPT-4.1 integration
+# ===================================================================
+
+# ===== CORE FRAMEWORK =====
+fastapi==0.110.0
+uvicorn==0.29.0
+pydantic==2.6.4                    # Actualizado para compatibilidad LangChain
+python-dotenv==1.0.0
+jinja2==3.1.2
+
+# ===== AI & LANGCHAIN =====
+# LangChain Framework (versions compatible)
+langchain==0.1.16
+langchain-openai==0.1.6
+langchain-core==0.1.52
+langchain-community==0.0.36
+
+# OpenAI Integration
+openai==1.30.0                     # Actualizado para GPT-4.1-turbo
+
+# RAG Components
+chromadb==0.4.21                   # Vector database para RAG
+sentence-transformers==2.2.2       # Para embeddings alternativos
+tiktoken==0.6.0                    # Tokenizer para OpenAI
+
+# Monitoring y Observabilidad
+langsmith==0.1.40
+
+# ===== DATABASE & ORM =====
+sqlalchemy==2.0.23
+
+# ===== DATA PROCESSING =====
+pandas==2.1.3
+plotly==5.18.0
+
+# ===== AUTHENTICATION & SECURITY =====
+python-jose==3.3.0
+passlib==1.7.4
+bcrypt==4.0.1
+python-multipart==0.0.6
+
+# ===== HTTP & NETWORKING =====
+httpx==0.25.1
+
+# ===== TESTING =====
+pytest==7.4.3
+pytest-asyncio==0.23.2
+
+# ===== DEVELOPMENT =====
+jupyter==1.0.0 

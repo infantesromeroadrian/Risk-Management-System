@@ -1,0 +1,120 @@
+---
+description: 
+globs: 
+alwaysApply: true
+---
+General Python Coding Rules
+Strict PEP 8 Compliance
+Line Length
+
+Keep code lines ≤ 79 characters
+Use appropriate line continuations when necessary
+
+Naming Conventions
+
+Variables and functions: Use snake_case
+# ✅ DO
+user_name = "John"
+def calculate_total_price(items, tax_rate):
+    pass
+
+# ❌ DON'T
+userName = "John"
+def CalculateTotalPrice(items, taxRate):
+    pass
+
+Classes: Use CamelCase
+# ✅ DO
+class UserProfile:
+    pass
+
+# ❌ DON'T
+class user_profile:
+    pass
+
+Constants: Use UPPERCASE
+# ✅ DO
+MAX_RETRY_COUNT = 5
+
+# ❌ DON'T
+maxRetryCount = 5
+
+
+
+Indentation and Spacing
+
+Strict indentation of 4 spaces (don't use tabs)
+Avoid unnecessary or redundant spaces
+Maintain clear logical separation between blocks, functions, methods, and classes
+
+# ✅ DO
+def process_data(data):
+    if data:
+        result = data * 2
+        return result
+    return None
+
+# ❌ DON'T
+def process_data( data ):
+    if data:
+     result=data*2
+     return result
+    return None
+
+
+Avoid Nested Loops
+Limit Nesting
+
+Do not allow more than one level of nested loops
+
+# ❌ DON'T
+for i in range(10):
+    for j in range(10):
+        for k in range(10):
+            print(i, j, k)
+
+# ✅ DO - Use helper functions
+def process_k_values(i, j):
+    for k in range(10):
+        print(i, j, k)
+        
+for i in range(10):
+    for j in range(10):
+        process_k_values(i, j)
+
+
+Use List Comprehensions or Generators
+
+Simplify loops when possible
+
+
+# ❌ DON'T
+squares = []
+for i in range(10):
+    squares.append(i * i)
+
+# ✅ DO
+squares = [i * i for i in range(10)]
+
+
+Decompose Complex Operations
+
+Use helper functions or generators for operations requiring multiple loops
+
+# ❌ DON'T
+result = []
+for i in range(10):
+    for j in range(10):
+        if i != j:
+            result.append((i, j))
+
+# ✅ DO
+result = [(i, j) for i in range(10) for j in range(10) if i != j]
+# Or if it's too complex:
+def generate_pairs():
+    for i in range(10):
+        for j in range(10):
+            if i != j:
+                yield (i, j)
+                
+result = list(generate_pairs())

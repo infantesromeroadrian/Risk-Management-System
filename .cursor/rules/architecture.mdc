@@ -1,0 +1,64 @@
+---
+description: 
+globs: 
+alwaysApply: true
+---
+Code Modularity and Organization Guidelines
+
+
+Folder Structure
+
+project/
+├── src/
+│   ├── models/
+│   │   └── class_models.py
+│   ├── utils/
+│   │   └── helpers.py
+│   ├── services/
+│   │   └── services.py
+│   ├── controllers/
+│   │   └── controllers.py
+│   └── main.py
+└── tests/
+    └── test_modules.py
+
+
+
+Atomization
+Key Principles
+
+Single Responsibility Principle: Each function performs one well-defined task
+Encapsulation: Each class encapsulates related functionalities (high cohesion and low coupling)
+
+Best Practices
+For Functions
+
+Create functions that focus on solving one specific problem
+Limit function size to improve readability and testing
+Use clear, descriptive names that indicate the function's purpose
+Implement proper error handling within each function
+Document function inputs, outputs, and behavior
+
+For Classes
+
+Group related functions into cohesive classes
+Minimize dependencies between classes
+Define clear interfaces for class interaction
+Use inheritance and composition appropriately
+Keep class implementations hidden behind well-defined APIs
+
+For Modules
+
+Organize related classes into logical modules
+Separate concerns across different modules
+Define clear module boundaries and responsibilities
+Create proper import hierarchies to avoid circular dependencies
+Document module purposes and relationships
+
+Testing Approach
+
+Write unit tests for individual functions and classes
+Create integration tests for module interactions
+Implement end-to-end tests for complete workflows
+Use test-driven development when appropriate
+Maintain high test coverage for all code

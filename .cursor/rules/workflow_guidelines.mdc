@@ -1,0 +1,55 @@
+---
+description: 
+globs: 
+alwaysApply: true
+---
+---
+description: Guidelines for working module-by-module with simultaneous architectural diagramming to maintain clarity and consistency.
+globs: diagrams/**/*.md, architecture/**/*.md
+alwaysApply: true
+---
+
+- **Module-by-Module Approach:**
+  - Clearly define and isolate each module before implementation.
+  - Focus on completing one module at a time to ensure thoroughness.
+
+- **Architectural Diagramming:**
+  - Concurrently maintain an updated architectural diagram while developing scripts.
+  - Immediately reflect all code changes and module relationships visually in the diagram.
+
+  ```markdown
+  # ✅ DO: Update diagrams immediately after code changes
+  - Module: User Authentication
+  - Status: Completed
+  - Updated Diagram: Yes
+
+  # ❌ DON'T: Delay diagram updates after module completion
+  - Module: User Authentication
+  - Status: Completed
+  - Updated Diagram: Pending
+  ```
+
+- **Clear Module Relationships:**
+  - Explicitly define and visualize relationships between modules in diagrams.
+  - Regularly verify diagrams against actual module interactions.
+
+- **Consistency and Clarity:**
+  - Maintain clear labeling and descriptions for each module and their interactions.
+  - Avoid ambiguous or incomplete representation of module connections.
+
+- **Impact Analysis for Module Changes:**
+  - Before making changes in a module, review all related modules and update diagrams accordingly.
+  - Ensure any modification in a single module triggers a complete review of all interconnected modules.
+
+- **Regular Validation:**
+  - Regularly validate module functionality against diagrammed architecture.
+  - Cross-check implemented functionality with planned architecture to ensure alignment.
+
+- **Documentation of Progress:**
+  - Document clearly the development progress of each module.
+  - Maintain synchronized documentation alongside diagrams to support clarity and quick reference.
+
+- **Review and Maintenance:**
+  - Continuously review and update diagrams and documentation to reflect the evolving architecture accurately.
+  - Establish routine checks to confirm architectural integrity after each module update.
+

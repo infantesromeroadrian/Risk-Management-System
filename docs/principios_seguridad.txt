@@ -1,0 +1,174 @@
+# **Introducción**
+
+Necesitamos comprender los objetivos centrales de la seguridad, que son proporcionar protección de disponibilidad, integridad y confidencialidad (tríada CID) para activos críticos. En otros frameworks como el ENS, se añaden la trazabilidad y la autenticidad (CITAD). Cada activo requerirá distintos niveles de protección, como veremos en los siguientes apartados. Todos los controles, mecanismos y salvaguardas de seguridad se implementan para proporcionar uno o más de estos tipos de protección, y todos los riesgos, amenazas y vulnerabilidades se miden por su capacidad potencial de comprometer uno o todos los principios de CID o CITAD.
+
+La protección de disponibilidad garantiza la confiabilidad y el acceso oportuno a los datos y recursos para individuos autorizados. Los dispositivos de red, las computadoras y las aplicaciones deben proporcionar la funcionalidad adecuada para funcionar de manera predecible con un nivel de rendimiento aceptable. Deben poder recuperarse de las interrupciones de manera segura y rápida para que la productividad no se vea afectada. Los mecanismos de protección necesarios deben existir para proteger contra amenazas internas y externas que podrían afectar la disponibilidad de todos los componentes de un sistema.
+
+Asegurar la disponibilidad de los recursos dentro de una organización es más complejo de lo que parece. Las redes tienen numerosos componentes que deben funcionar correctamente (enrutadores, conmutadores, servidores DNS, servidores DHCP, proxies, firewalls). El software tiene múltiples elementos que deben ejecutarse adecuadamente (sistema operativo, aplicaciones, software antimalware). Existen factores ambientales que pueden afectar negativamente las operaciones (incendios, inundaciones, problemas eléctricos), además de posibles desastres naturales y ataques físicos. Una organización debe comprender completamente su entorno operativo y sus vulnerabilidades para implementar las contramedidas adecuadas.
+
+**Integridad**
+
+La integridad se mantiene cuando se garantiza la exactitud y confiabilidad de la información y los sistemas, evitando cualquier modificación no autorizada. El hardware, el software y los mecanismos de comunicación deben funcionar conjuntamente para mantener y procesar los datos correctamente y transferirlos a los destinos previstos sin alteraciones. Los sistemas y la red deben protegerse de interferencias y contaminación externas.
+
+Los entornos que aplican este atributo de seguridad garantizan que ni los atacantes ni los errores de los usuarios comprometan la integridad de los sistemas o datos. Cuando un atacante inserta un virus, una bomba lógica o una puerta trasera en un sistema, la integridad del sistema queda comprometida. Esto puede dañar la integridad de la información mediante la corrupción, modificación maliciosa o reemplazo de datos. Controles de acceso estrictos, detección de intrusos y hashing son medidas efectivas contra estas amenazas.
+
+Los usuarios suelen afectar la integridad de un sistema o sus datos por error (aunque también pueden cometer actos maliciosos). Por ejemplo, pueden eliminar inadvertidamente archivos de configuración al intentar liberar espacio en un disco lleno, como al eliminar archivos de la carpeta Windows. También pueden introducir valores incorrectos en aplicaciones, como cobrar 2000€ a un cliente en lugar de 200€. La modificación incorrecta de datos en bases de datos es otra forma común de corrupción accidental, con efectos potencialmente duraderos.
+
+La seguridad debe optimizar las capacidades de los usuarios ofreciéndoles solo ciertas opciones y funcionalidades, reduciendo así la frecuencia y el impacto de los errores. Los archivos críticos del sistema deben estar restringidos para evitar su visualización o acceso no autorizado. Las aplicaciones deben verificar que los valores de entrada sean válidos y razonables. Las bases de datos deben permitir modificaciones solo a personas autorizadas, y los datos en tránsito deben protegerse mediante cifrado u otros mecanismos.
+
+**Confidencialidad**
+
+La confidencialidad garantiza que se aplique el nivel necesario de secreto en cada etapa del procesamiento de datos y evita la divulgación no autorizada. Este nivel de confidencialidad debe mantenerse mientras los datos residen en sistemas y dispositivos dentro de la red, durante su transmisión y una vez que llegan a su destino.
+
+Los atacantes pueden burlar los mecanismos de confidencialidad mediante monitoreo de red, observación física, robo de archivos de contraseñas, ruptura de esquemas de cifrado e ingeniería social. La ingeniería social ocurre cuando una persona engaña a otra para que comparta información confidencial, por ejemplo, haciéndose pasar por alguien autorizado. Este tipo de ataque puede adoptar diversas formas y utilizar cualquier medio de comunicación directa.
+
+Los usuarios pueden divulgar información confidencial de manera intencional o accidental al no cifrarla antes de enviarla, al caer víctimas de ataques de ingeniería social, al compartir secretos comerciales o al no tener suficiente cuidado durante el procesamiento de información sensible.
+
+La confidencialidad se puede asegurar cifrando los datos almacenados y transmitidos, implementando controles de acceso y clasificación de datos, y capacitando al personal en procedimientos adecuados de protección de información.
+
+La disponibilidad, la integridad y la confidencialidad son principios fundamentales de la seguridad. Es esencial comprender su significado, cómo se implementan mediante diferentes mecanismos y cómo su ausencia puede afectar negativamente a una organización.
+
+# **Seguridad Equilibrada**
+
+En la práctica, la seguridad de la información suele abordarse principalmente desde la perspectiva de la confidencialidad (mantener los secretos en secreto). Las amenazas a la integridad y la disponibilidad pueden pasarse por alto hasta que se materializan. Algunos activos tienen requisitos críticos de confidencialidad (secretos comerciales), otros de integridad (valores de transacciones financieras) y otros de disponibilidad (servidores de comercio electrónico). Muchas personas comprenden conceptualmente la tríada CID, pero no aprecian completamente la complejidad de implementar los controles necesarios para proporcionar toda la protección que abarcan estos conceptos. A continuación se presenta una breve lista de algunos controles y su relación con los componentes de la tríada CID:
+
+**Disponibilidad**
+
+- Conjunto redundante de discos económicos (RAID)
+- Agrupación en clústeres
+- Balanceo de carga
+- Datos y líneas eléctricas redundantes
+- Copias de seguridad de datos y software
+- Rotura de disco
+
+**Integridad**
+
+- Hashing (integridad de datos)
+- Gestión de la configuración (integridad del sistema)
+- Control de cambios (integridad del proceso)
+- Control de acceso (físico y técnico)
+- Firma digital de software
+
+**Confidencialidad**
+
+- Cifrado de datos en reposo (disco completo, cifrado de base de datos)
+- Cifrado de datos en tránsito (IPSec, SSL, PPTP, SSH)
+- Control de acceso (físico y técnico)
+
+![image.png](attachment:e2e1e5ba-3d25-449d-9a56-ccf3a4f5459c:image.png)
+
+**Términos clave**
+
+Disponibilidad El acceso confiable y oportuno a los datos y recursos es proporcionado a las personas autorizadas.
+
+Integridad Se proporciona precisión y confiabilidad de la información y los sistemas y se evita cualquier modificación no autorizada.
+
+Confidencialidad El nivel necesario de secreto se hace cumplir y no está autorizado se impide la divulgación.
+
+# **Definiciones de seguridad**
+
+Las palabras *"vulnerabilidad"*, *"amenaza"*, *"riesgo"* y *"exposición"* a menudo se usan indistintamente, aunque tienen significados diferentes. Comprender la definición de cada término y las relaciones entre estos conceptos es fundamental para desarrollar un plan de riesgos efectivo.
+
+Una vulnerabilidad es la ausencia de una contramedida o una debilidad en una contramedida existente. Puede manifestarse como una debilidad humana, de software, de hardware o de procedimiento que puede ser explotada. Algunos ejemplos incluyen: servicios innecesarios ejecutándose en un servidor, aplicaciones o sistemas operativos sin parches, puntos de acceso inalámbricos sin restricciones, puertos abiertos en un firewall, seguridad física deficiente que permite el acceso no autorizado a salas de servidores, o políticas de contraseñas no aplicadas en servidores y estaciones de trabajo.
+
+Una amenaza es cualquier peligro potencial asociado con la explotación de una vulnerabilidad. La amenaza consiste en que alguien o algo identifique una vulnerabilidad específica y la use contra la empresa o el individuo. La entidad que aprovecha una vulnerabilidad se denomina agente de amenaza. Este agente podría ser un intruso que accede a la red a través de un puerto en el firewall, un proceso que accede a datos violando la política de seguridad, un desastre natural que destruye una instalación, o un empleado que comete un error que expone información confidencial.
+
+Un riesgo es la probabilidad de que un agente de amenaza explote una vulnerabilidad y el impacto empresarial correspondiente. Las siguientes imágenes muestran cómo evaluar la probabilidad e impacto de una amenaza.
+
+![image.png](attachment:f3f9182f-46e0-4635-b882-12e7fefdcbbd:image.png)
+
+Cuando un firewall tiene varios puertos abiertos, aumenta la probabilidad de que un intruso utilice alguno de ellos para acceder a la red sin autorización.
+
+Los usuarios desinformados sobre procesos y procedimientos tienen mayor probabilidad de cometer errores que destruyan datos. Asimismo, la ausencia de un sistema de detección de intrusos (IDS) incrementa las posibilidades de que un ataque pase inadvertido hasta que sea demasiado tarde.
+
+El riesgo establece la conexión entre la vulnerabilidad, la amenaza y la probabilidad de explotación, vinculándolos con el impacto resultante para el negocio.
+
+Una exposición representa una situación en la que se está expuesto a pérdidas potenciales. Toda vulnerabilidad expone a una organización a posibles daños. Por ejemplo, si la gestión de contraseñas es deficiente y no se aplican políticas adecuadas, la empresa queda expuesta al riesgo de que las credenciales de los usuarios sean capturadas y utilizadas sin autorización.
+
+Cuando una empresa no realiza inspecciones de su cableado ni implementa medidas preventivas contra incendios, se expone a siniestros que podrían tener consecuencias devastadoras.
+
+![image.png](attachment:794ad00e-21e2-4856-80f1-cbca4566151e:image.png)
+
+Se implementa un control o contramedida para mitigar (reducir) el riesgo potencial. Una contramedida puede ser una configuración de software, un dispositivo de hardware o un proceso que elimine una vulnerabilidad o reduzca la probabilidad de que un agente de amenazas pueda explotarla.
+
+Algunos ejemplos de contramedidas incluyen la administración de contraseñas sólidas, firewalls, guardias de seguridad, mecanismos de control de acceso, cifrado y capacitación en seguridad.
+
+Consideremos un ejemplo: si una empresa tiene software antimalware pero no mantiene las firmas actualizadas, esto constituye una vulnerabilidad. La empresa queda vulnerable a ataques de malware. La amenaza es que un virus aparezca en el entorno e interrumpa la productividad. El riesgo consiste en la probabilidad de que un virus se infiltre y cause daños, junto con el impacto potencial resultante. Si un virus logra infiltrarse, se ha explotado la vulnerabilidad y la empresa queda expuesta a pérdidas. Las contramedidas apropiadas serían actualizar las firmas e instalar el software antimalware en todos los ordenadores. La imagen anterior ilustra las relaciones entre riesgos, vulnerabilidades, amenazas y contramedidas.
+
+La aplicación de la contramedida adecuada puede eliminar la vulnerabilidad y la exposición, reduciendo así el riesgo. Aunque la empresa no puede eliminar al agente amenazante, sí puede protegerse y evitar que este aproveche las vulnerabilidades del entorno.
+
+Muchas personas subestiman estos términos básicos, considerándolos menos importantes que aspectos más atractivos de la seguridad de la información. Sin embargo, sin un lenguaje común acordado por el equipo de seguridad, la confusión se instala rápidamente. Estos términos fundamentan los conceptos básicos de seguridad y, si se malinterpretan, las actividades implementadas para garantizar la seguridad resultarán igualmente confusas.
+
+# **Tipos de control**
+
+Hasta ahora hemos analizado los objetivos de seguridad (disponibilidad, integridad, confidencialidad) y la terminología utilizada en la industria (vulnerabilidad, amenaza, riesgo, control). Estos componentes fundamentales deben comprenderse para implementar la seguridad de manera organizada. A continuación, abordaremos los tipos de control que pueden implementarse y su funcionalidad.
+
+Los controles se implementan para reducir el riesgo organizacional y se clasifican en tres categorías principales: **administrativos, técnicos y físicos**.
+
+Los **controles administrativos**, también conocidos como "controles blandos", están orientados a la gestión. Entre sus ejemplos se incluyen la documentación de seguridad, la gestión de riesgos, la seguridad del personal y la capacitación.
+
+Los **controles técnicos** (o controles lógicos) son componentes de software o hardware como firewalls, sistemas de detección de intrusos (IDS), encriptación, y mecanismos de identificación y autenticación.
+
+Los **controles físicos** son elementos que protegen instalaciones, personal y recursos. Algunos ejemplos son los guardias de seguridad, cerraduras, cercas e iluminación.
+
+Estos tipos de control deben implementarse conjuntamente para proporcionar una defensa en profundidad, que consiste en el uso coordinado de múltiples controles de seguridad en un enfoque por capas, como muestra la siguiente imagen.
+
+![image.png](attachment:b0e6fa23-00c3-4f6b-a44f-0e3df1a20c22:image.png)
+
+Un sistema de defensa de múltiples capas minimiza la probabilidad de penetración y compromiso exitoso porque un atacante tendría que atravesar varios mecanismos de protección diferentes antes de acceder a los activos críticos. Por ejemplo, la empresa A puede implementar los siguientes controles físicos en un modelo en capas:
+
+- Muro
+- Barrera
+- Puertas exteriores
+- Videovigilancia
+- Guardia de seguridad
+- Torniquete de acceso
+- Puertas internas cerradas
+- Sala de servidores cerrada
+
+Las categorías de controles que se pueden implementar son administrativos, técnicos y físicos. Pero, ¿qué funciones cumplen estos controles en la protección de nuestros entornos?
+
+Los controles de seguridad pueden ser preventivos, detectivos, correctivos, disuasorios, de recuperación y compensatorios. Al comprender mejor estas funcionalidades, podrá tomar decisiones más informadas sobre qué controles son más adecuados para situaciones específicas. Las seis funcionalidades de control son:
+
+- **Disuasión:** Pretende desalentar a un atacante potencial
+- **Preventivo:** Destinado a evitar que ocurra un incidente
+- **Correctivo:** Repara componentes o sistemas después de que ha ocurrido un incidente
+- **Recuperación:** Destinado a devolver el entorno a las operaciones normales
+- **Detective:** Ayuda a identificar las actividades de un incidente y potencialmente a un intruso
+- **Controles de compensación:** Proporcionan una medida alternativa de control
+
+Una vez que comprenda completamente lo que hacen los diferentes controles, podrá utilizarlos en las ubicaciones adecuadas para riesgos específicos, en lugar de simplemente colocarlos donde se vean mejor.
+
+Al analizar una estructura de seguridad, es más eficaz implementar primero un modelo preventivo y luego complementarlo con mecanismos de detección, recuperación y corrección. Este enfoque puede personalizarse según las necesidades específicas de cada organización.
+
+El objetivo principal de estas técnicas es detener los problemas antes de que ocurran. Sin embargo, debe estar preparado para reaccionar rápidamente cuando surja un problema. Como no es posible prevenirlo todo, lo que no pueda prevenir debe poder detectarlo rápidamente. Por esta razón, los controles preventivos y de detección siempre deben implementarse en conjunto y complementarse entre sí. Llevando este concepto más allá: lo que no puede prevenir, debe poder detectarlo; y si detecta algo, significa que no pudo prevenirlo, por lo que debe tomar medidas correctivas para asegurarse de que sea prevenido en el futuro. De este modo, los tres tipos de controles trabajan juntos: preventivo, detectivo y correctivo.
+
+A modo de ejemplo, *"Un cortafuegos es un control preventivo, pero si un atacante supiera que está instalado, podría ser un elemento disuasorio"*. Simplifiquemos esto. Al asignar una funcionalidad a un control, considere el propósito principal de su implementación. Un cortafuegos intenta evitar que ocurran eventos negativos, por lo que es fundamentalmente un control preventivo.
+
+Los registros de auditoría se generan después de un evento, por lo que son controles detectivos. Un sistema de respaldo de datos se desarrolla para recuperar información, por lo que es un control de recuperación. Las imágenes de computadora se crean para restaurar sistemas cuando el software se corrompe, por lo que son controles correctivos.
+
+Un tipo de control que suele generar confusión es el control de compensación. Veamos algunos ejemplos para clarificar su función. Si su empresa necesita implementar una fuerte seguridad física, podría recomendar contratar guardias de seguridad. Sin embargo, después de evaluar los costos, la empresa podría optar por un control de compensación (alternativo) que ofrezca protección similar pero más económica, como una cerca. En otro escenario, suponga que usted, como administrador de seguridad, gestiona los firewalls de la empresa.
+
+La dirección le indica que debe permitir cierto protocolo vulnerable a través del firewall por necesidades del negocio. En este caso, la red debe protegerse mediante un control de compensación para ese protocolo específico, como configurar un servidor proxy que garantice la inspección y el control adecuados del tráfico.
+
+En resumen, un control de compensación es una alternativa que proporciona una protección similar al control original, pero se implementa por ser más económico o por permitir una funcionalidad empresarial específica.
+
+Existen diversos tipos de controles de seguridad que deben funcionar coordinadamente. La complejidad de estos controles y del entorno donde operan puede ocasionar contradicciones o brechas de seguridad. Esto puede crear vulnerabilidades inesperadas que los implementadores no comprenden completamente. Por ejemplo, una empresa puede tener controles de acceso técnico muy estrictos y todos los controles administrativos necesarios, pero si se permite el acceso físico a cualquier sistema de la instalación, existen claros riesgos de seguridad. En conjunto, estos controles deben funcionar armónicamente para crear un entorno seguro, saludable y productivo.
+
+# **Marcos de seguridad**
+
+Hasta el momento sabemos lo que necesitamos lograr (disponibilidad, integridad, confidencialidad), conocemos las herramientas disponibles (controles administrativos, técnicos, físicos) y dominamos la terminología esencial (vulnerabilidad, amenaza, riesgo, control). Antes de abordar cómo desarrollar un programa de seguridad organizacional, exploremos una práctica que debe evitarse: la "seguridad a través de la oscuridad".
+
+Este concepto asume erróneamente que los adversarios son menos inteligentes que nosotros y no podrán resolver algo que consideramos complejo. Un ejemplo cotidiano sería esconder una llave de repuesto bajo el felpudo. Aunque asumimos que nadie conoce su existencia y por tanto está segura, la vulnerabilidad es evidente: cualquiera con acceso a esa llave oculta podría entrar fácilmente a la casa. Los ladrones experimentados conocen estas prácticas y buscan activamente estas vulnerabilidades.
+
+En el ámbito técnico, algunos proveedores argumentan que su código compilado ofrece mayor protección que el código abierto porque oculta las instrucciones de programación originales. Sin embargo, los atacantes disponen de numerosas herramientas de ingeniería inversa para reconstruir el código original, además de técnicas como fuzzing o manipulación de entradas de datos para explotar el software sin necesidad de ingeniería inversa. El enfoque correcto es asegurar que el software original esté libre de fallos, en lugar de confiar en que el formato compilado proporcionará protección suficiente.
+
+Un programa de seguridad constituye un marco compuesto por múltiples elementos: mecanismos de protección lógica, administrativa y física, procedimientos, procesos de negocio y personas que colaboran para proporcionar un nivel adecuado de protección. Cada elemento cumple una función crucial en el marco; si alguno falta o está incompleto, todo el sistema puede verse comprometido. El programa debe funcionar en capas, donde cada una brinda soporte a la capa superior y protección a la inferior. Esta estructura permite a las organizaciones integrar diversas tecnologías, métodos y procedimientos para alcanzar el nivel de protección necesario.
+
+Entre los procedimientos habituales de estos marcos destaca el análisis de riesgos. Este proceso requiere definir el alcance (todas las sedes, una oficina específica, etc.), identificar activos (personal, contratos, nóminas, bases de datos, proveedores, equipos informáticos, dispositivos de almacenamiento, etc.), identificar amenazas (incendios, cortes eléctricos, bajas de personal, fallos de red, etc.), detectar vulnerabilidades, aplicar salvaguardas, evaluar el riesgo y gestionarlo adecuadamente. Todo esto puede resumirse en la siguiente captura.
+
+![image.png](attachment:9ff49ac6-c861-40a8-ba32-eaa2c2c20abb:image.png)
+
+# **Conclusión**
+
+Como hemos visto, no podemos hablar de riesgos IT sin mencionar la tríada CID y sin hacer referencia a diversos controles de seguridad. Estos controles han sido compilados en marcos normativos como el ENS, ISO 27001, Cobit, NIST, SOC y Controles CIS. Cada marco ha seleccionado, categorizado y creado su propia normativa, adaptándose a sectores específicos: PCI-DSS para el sector financiero, HIPAA para el sector de salud en Estados Unidos, o a nivel nacional, el Esquema Nacional de Seguridad para la Administración Pública.

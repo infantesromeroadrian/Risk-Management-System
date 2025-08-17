@@ -1,0 +1,101 @@
+---
+description: 
+globs: 
+alwaysApply: true
+---
+---
+description: Rules for optimized, modular, scalable, and PEP 8 compliant programming and contextual code reviews.
+globs: src/**/*.py, tests/**/*.py
+alwaysApply: true
+---
+
+- **Programming Style Enforcement:**
+  - Strictly adhere to **PEP 8** guidelines
+    - Line length ≤ 79 characters
+    - Indentation: 4 spaces
+    - Naming conventions:
+      - Functions and variables: `snake_case`
+      - Classes: `CamelCase`
+      - Constants: `UPPERCASE`
+
+- **Optimized Looping Structure:**
+  - Avoid nested loops exceeding one level
+  - Utilize list comprehensions, generators, or helper functions for efficiency
+  ```python
+  # ✅ DO: Use generator expressions
+  processed_data = (process(item) for item in items)
+
+  # ❌ DON'T: Nested loops
+  for item in items:
+      for sub_item in item.sub_items:
+          process(sub_item)
+  ```
+
+- **Modular Project Structure:**
+  - Clearly define and separate code into directories:
+    ```
+    project/
+    ├── src/
+    │   ├── controllers/
+    │   ├── models/
+    │   ├── services/
+    │   ├── utils/
+    │   └── main.py
+    └── tests/
+        └── test_modules.py
+    ```
+
+- **Atomic and Modular Code:**
+  - Follow Single Responsibility Principle
+  - Functions and methods perform only one clearly defined task
+  - Classes encapsulate logically related methods and attributes
+
+- **Object-Oriented Programming (OOP) Rules:**
+  - Encapsulate using private (`__var`) or protected (`_var`) attributes
+  - Prefer composition over inheritance
+  - Keep methods concise, typically ≤ 20 lines
+
+- **Pure Functions and Clear Exceptions:**
+  - Functions must avoid side effects and state changes
+  ```python
+  # ✅ DO: Pure function example
+def calculate_tax(price: float, tax_rate: float) -> float:
+      return price * (1 + tax_rate)
+  ```
+  - Use explicit and specific exception handling
+
+- **Scalability and Resource Optimization:**
+  - Maintain algorithm complexity ≤ O(n)
+  - Use efficient data structures (sets, dicts)
+  - Utilize generators for memory-efficient processing
+
+- **Contextual Code Review Rules:**
+  - Review all minimally related files, never isolated files
+  - Ensure architecture-defined relationships are explicitly reviewed
+  - Identify high coupling and low cohesion areas
+  - Recommend actions for reducing excessive dependencies
+
+- **Consistency Across Files:**
+  - Uniform coding style across related files
+  - Highlight and correct inconsistencies proactively
+
+- **Impact Analysis:**
+  - Clearly identify and document indirect impacts on related files
+  - Provide explicit warnings for potential unintended consequences
+
+- **Architectural Integrity:**
+  - Confirm modifications do not negatively affect the overall project architecture
+
+- **Testing Considerations:**
+  - Always review and update related unit and integration tests
+  - Ensure test coverage matches code changes
+
+- **Technical Debt Identification:**
+  - Clearly highlight potential or existing technical debt
+  - Recommend actionable steps for debt resolution
+
+- **Maintenance and Updates:**
+  - Regularly revise and update rules as project evolves
+  - Integrate actual project examples into rule documentation
+  - Cross-reference related rules consistently
+

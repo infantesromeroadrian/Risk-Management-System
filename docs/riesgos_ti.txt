@@ -1,0 +1,169 @@
+# **Riesgos en TI**
+
+## **¿Qué es un marco de gestión de riesgos de IT?**
+
+Un marco de gestión de riesgos de IT es un sistema de normas, directrices y prácticas recomendadas que ayudan a gestionar los riesgos de ciberseguridad y mantener las regulaciones del sector. Los marcos presentan un método estandarizado y bien documentado para:
+
+- Realizar evaluaciones de riesgos que comprueben las prioridades de tu empresa e identifiquen las brechas en los controles de seguridad.
+- Realizar un análisis de riesgos sobre las brechas en los controles existentes.
+- Priorizar las acciones y futuras inversiones en seguridad basándose en el análisis de riesgos.
+- Ejecutar estrategias mediante la aplicación de controles de seguridad y prácticas recomendadas.
+- Medir y evaluar la madurez del programa de seguridad a lo largo del proceso.
+
+La persona responsable de la ejecución del marco de gestión de riesgos varía según la empresa. Las organizaciones más grandes suelen tener un Director de Información o un Director de Riesgos para gestionar el proceso y trabajar con su equipo de TI. Las organizaciones más pequeñas pueden asignar a un responsable de TI para supervisar el proyecto.
+
+Independientemente del tamaño de la empresa, es esencial que varias partes interesadas participen en la creación del marco. Por ejemplo, el consejo de administración y los directores tendrán un papel crucial en:
+
+- Identificar los riesgos que pueden exponer a la organización
+- Establecer la formación continua de los empleados
+- Gestionar el presupuesto necesario para mitigar los riesgos actuales y futuros
+
+## **¿Por qué necesita mi empresa un marco de seguridad?**
+
+Los marcos de ciberseguridad se han convertido en un elemento básico para las empresas que quieren cumplir con la normativa estatal, industrial o internacional. Más allá del cumplimiento legal, estos marcos ayudan a las organizaciones a priorizar acciones de manera flexible, repetible y rentable para proteger su negocio.
+
+Un marco de gestión de riesgos de IT proporcionará cinco beneficios principales a tu organización:
+
+- Ahorro de tiempo: Te permite mapear tu estado actual de ciberseguridad. A partir de ahí, puedes identificar las brechas que guiarán conversaciones con las partes interesadas, sabiendo dónde estás y dónde deberías estar.
+- Aplicación universal: Gran parte del contenido incluido en estos marcos se aplica a cualquier organización. Por ejemplo, independientemente de tu sector o ubicación, tu empresa probablemente maneja datos sensibles, por lo que puedes beneficiarte de acciones específicas sobre su gestión.
+- Respaldo comunitario: No tienes que partir de cero. Los marcos más fiables son desarrollados mediante colaboración entre expertos de diversos sectores. Este conocimiento colectivo garantiza que el marco que elijas ya ha sido probado y su eficacia demostrada.
+- Consistencia: Los marcos proporcionan coherencia al abordar las necesidades de seguridad. Sin un marco, las partes interesadas pueden actuar de formas diferentes, causando ineficiencias y creando vulnerabilidades imprevistas.
+- Simplificación: Un marco establecido facilita explicar cómo la seguridad gestiona las amenazas y los riesgos, incluso a personas menos familiarizadas con estos temas. La ciberseguridad afecta a toda la organización, por lo que tener un lenguaje común resulta útil.
+
+# **Control de riesgos en la gestión de sistemas**
+
+## **Introducción al control de riesgos**
+
+Todas las organizaciones se enfrentan a riesgos al desarrollar su actividad y utilizar sus servicios. Los reguladores y agencias de valoración están empezando a considerar el análisis de los procesos de gestión del riesgo al evaluar la salud de las empresas.
+
+Hoy, una correcta gestión del riesgo supone una ventaja competitiva, especialmente en la coyuntura económica actual donde la confianza es uno de los aspectos más valorados por los clientes. Contar con procesos para mitigar riesgos refuerza esta confianza.
+
+En la gestión de servicios de TI, los riesgos deben gestionarse para asegurar la disponibilidad de los sistemas y evitar la pérdida de datos confidenciales, entre otros contratiempos.
+
+Una estrategia para la gestión de riesgos es esencial en el desarrollo de la estrategia de gestión de servicios. ITIL la incluye como parte del diseño del servicio, ya que desde su concepción es necesario plantear los diferentes riesgos y las alternativas para minimizar sus efectos negativos. Por tanto, durante la definición de un nuevo servicio deben considerarse los procesos necesarios para gestionar el riesgo.
+
+Actualmente, la gestión del riesgo se realiza con un enfoque más holístico y continuado, adoptando lo que se conoce como Enterprise Risk Management (ERM) o gestión integral del riesgo. Este concepto apareció en 2003, cuando la Casualty Actuarial Society (CAS) lo definió como una disciplina mediante la cual las organizaciones monitorizan, controlan, explotan y financian los riesgos de cualquier fuente para aumentar el valor ofrecido a sus grupos de interés. Este enfoque incluye metodologías y procesos utilizados por organizaciones de todas las industrias para gestionar riesgos y optimizar oportunidades.
+
+La gestión del riesgo comprende las fases de identificación, seguimiento y priorización, según la norma ISO 31000. Para contrarrestarlo, es necesario monitorizar y controlar la probabilidad e impacto de la causa desencadenante del riesgo.
+
+## **La norma ISO 31000**
+
+Aunque los riesgos son de muy diversa índole según el ámbito empresarial, la norma ISO 31000 propone pautas estandarizadas para gestionarlos. Publicada como estándar el 13 de noviembre de 2009, pretende ser aplicable y adaptable para cualquier tipo de organización pública o privada, asociación o incluso para empresas unipersonales. Junto a esta norma, se publicó la guía 73, que busca unificar el vocabulario utilizado en los procesos de gestión de riesgos.
+
+Esta norma se divide en tres grandes bloques:
+
+### **Principios para la gestión del riesgo:**
+
+- Crear valor para contribuir a la consecución de los objetivos de la empresa.
+- Integración con los procesos de la organización.
+- Ayudar a la toma de decisiones al aportar información sobre posibles escenarios.
+- Minimizar la incertidumbre.
+- Función sistemática, estructurada y adecuada para obtener resultados fiables.
+- Basada en la mejor información disponible en cada momento.
+- Alineada con el contexto interno y externo de la propia empresa.
+- Debe considerar los factores humanos y culturales de la organización.
+- Transparente en la información y participación de todos los interesados.
+- Dinámica, iterativa y sensible al cambio.
+- Contribuir a la mejora continua de la empresa.
+
+### **Estructura de soporte:**
+
+La gestión del riesgo debe contar con el apoyo de la alta dirección. Se desarrolla iterativamente en ciclos que pretenden diseñar la mejor estructura de soporte, implantarla eficientemente y monitorizar las actividades para mejorarla continuamente. El proceso de gestión de riesgos incluye las etapas de identificar, analizar, evaluar y tratar riesgos. Debe existir una comunicación y consulta continua con las diferentes áreas de la organización, así como seguimiento y revisión.
+
+Sin embargo, esta norma solo pretende marcar directrices, no implementar un modelo uniforme entre diferentes empresas. El diseño e implementación de un plan de gestión de riesgos y su marco de trabajo necesita considerar las particularidades de cada industria: sus objetivos, contexto, estructura, operaciones, procesos, proyectos, productos, servicios y activos.
+
+### **Gestión de riesgos en servicios de TI**
+
+ITIL define el proceso de gestión de riesgos orientado a los servicios de TI, formando parte del plan de continuidad del servicio (ITSCM). Su objetivo es determinar la probabilidad de fallos con la configuración actual del servicio y la capacidad de soporte necesaria en la organización.
+
+El análisis de riesgos debe realizarse durante la fase de diseño del servicio para identificar los riesgos derivados de la indisponibilidad de componentes de la infraestructura, y aquellos relacionados con la pérdida de confidencialidad e integridad por errores en el servicio.
+
+El objetivo de la gestión de riesgos en un servicio de TI debe ser identificar los activos, amenazas y vulnerabilidades que conforman el riesgo, y establecer las contramedidas necesarias.
+
+El riesgo también está definido por el nivel de aceptación de la organización, que puede ser más o menos propensa a mitigar o asumir cierto nivel de riesgo.
+
+El seguimiento del riesgo se basa generalmente en la probabilidad e impacto de un evento. Las contramedidas se implementan, si su coste puede justificarse, para reducir el impacto del evento o disminuir las probabilidades de que ocurra.
+
+Antes de identificar los riesgos, se debe estudiar el impacto que un mal funcionamiento del servicio puede producir en la organización.
+
+El análisis del impacto (Business Impact Analysis, BIA) identifica:
+
+- Los servicios más importantes para la organización y cómo pueden afectar al negocio: pérdida de ingresos, aumento de costes o daño reputacional.
+- Cómo el impacto puede aumentar tras la interrupción del servicio y los momentos del día o año donde el impacto es mayor.
+- El personal y las habilidades necesarias para mantener el negocio de manera aceptable.
+- El tiempo asumible para la recuperación del servicio.
+- La prioridad para recuperar diferentes servicios afectados.
+
+El análisis de los riesgos y su impacto suele representarse gráficamente enfrentando el impacto y el tiempo de interrupción del servicio.
+
+La gestión de riesgos debe realizarse siguiendo metodologías estándar, como la metodología M*o*R (Management of Risk) explicada en ITIL. Los procesos incluidos en esta gestión comprenden:
+
+- Identificación: de amenazas y oportunidades que pueden impactar en la consecución de objetivos.
+- Evaluación: entender los efectos de las amenazas y oportunidades identificadas.
+- Planificación: preparar respuestas específicas que reduzcan las amenazas y maximicen las oportunidades.
+- Implementación: ejecutar acciones, monitorizar su efectividad y tomar medidas correctivas cuando las respuestas no cumplen las expectativas.
+
+Un entregable esencial de un plan de gestión de riesgos es un perfil de riesgos que permita entender fácilmente el impacto de cada posible situación a la que se enfrenta un servicio.
+
+Para este perfil, se puede construir una matriz que relacione la probabilidad de un evento con su impacto sobre el negocio. Esto permite priorizar las medidas para mitigar aquellos riesgos con alta probabilidad y alto impacto.
+
+Ejemplos de medidas típicas para reducir el riesgo son:
+
+- Aumento de la resiliencia del sistema.
+- Subcontratación de servicios a múltiples proveedores.
+- Equipos en redes aisladas para casos de fallo en las redes principales.
+
+En la gestión de riesgos, es necesario establecer, junto con el propietario del servicio, tanto el RTO como el RPO (Recovery Time Objective y Recovery Point Objective).
+
+El RTO es el tiempo que transcurrirá antes de que una infraestructura esté disponible nuevamente. Para reducirlo, se requiere que la infraestructura (tecnológica, logística, física) esté disponible lo antes posible tras una interrupción.
+
+El RPO determina cuándo la infraestructura recuperada comenzará a ser operativa. Básicamente, indica la cantidad de datos que la organización está dispuesta a perder. Para reducir el RPO es necesario aumentar el sincronismo en la réplica de datos.
+
+## **Metodología Magerit**
+
+Magerit es la metodología de análisis y gestión de riesgos elaborada por el Consejo Superior de Administración Electrónica. Su objetivo es estudiar los riesgos propios de un sistema de información y su entorno, concienciar a los responsables sobre su existencia y la necesidad de gestionarlos, y ayudar a planificar las respuestas necesarias para controlarlos.
+
+Para ello, evalúa el impacto que una violación de seguridad tiene para la organización, señala los riesgos existentes, las amenazas y la vulnerabilidad del sistema. El resultado son recomendaciones sobre medidas adecuadas para conocer, prevenir, impedir, reducir o controlar estos riesgos identificados.
+
+Magerit identifica dos actividades principales:
+
+### **Análisis de riesgos:**
+
+Permite determinar los activos de la organización, las amenazas y, finalmente, las contramedidas para mitigarlas. Con ello, se obtiene el impacto (lo que podría pasar) y el riesgo (lo que probablemente pase).
+
+Los activos son los recursos del sistema de información o asociados al mismo: servicios, aplicaciones, equipos informáticos, soportes de información, equipamiento auxiliar, redes de comunicaciones, instalaciones y personas.
+
+Los activos deben valorarse adecuadamente. No hay que confundir valor y coste. Un activo tiene valor si es útil y no puede prescindirse de él fácilmente. En general, se distingue entre un valor intrínseco del activo y un valor acumulado que considera el valor de los activos dependientes.
+
+Para valorar un activo, se analizan diferentes dimensiones: autenticidad (daño por no conocer quién accede), confidencialidad (daño por revelación de información), integridad (daño por datos corruptos) y disponibilidad (daño por no poder utilizar el activo).
+
+Las amenazas representan todo lo que puede ocurrir y afectar a un activo. Para valorarlas, se determina la degradación (intensidad del perjuicio) y la frecuencia (periodicidad esperada). La degradación suele expresarse como fracción del valor del activo y la frecuencia como tasa anual.
+
+La degradación se relaciona directamente con el impacto y la frecuencia con el riesgo. El impacto refleja el daño posible, mientras que el riesgo refleja el daño probable. Las medidas para atenuar el riesgo deben enfocarse en disminuir la degradación o la frecuencia.
+
+### **Gestión de riesgos:**
+
+Permite organizar las medidas defensivas para reducir los riesgos. El riesgo debe reducirse hasta el nivel asumido por la dirección de la empresa. Se busca alcanzar niveles de impacto y riesgo residual o despreciable. La existencia de un nivel residual indica que existe un riesgo, pero el coste de mitigarlo no compensa el valor del activo afectado. Las medidas como respuesta a los riesgos pueden ser:
+
+- Técnicas (aplicaciones, equipos y comunicaciones)
+- Físicas (entorno de trabajo)
+- Organizacionales (prevención de incidencias)
+- Políticas de personal (formación permanente)
+
+Es lógico que el coste de estas medidas no supere el coste de los activos protegidos. El riesgo disminuye rápidamente con pequeñas inversiones iniciales, reduciéndose gradualmente la relación entre disminución del riesgo y aumento de inversión. A partir de cierto punto, reducir mínimamente el riesgo supone un gasto muy elevado. Es importante destacar que la decisión sobre los valores residuales no es técnica sino una responsabilidad de la dirección de la empresa.
+
+## **Pilar, software de gestión de riesgos**La gestión de riesgos debe entenderse como una serie de procesos adicionales que forman parte de una organización. Las metodologías permiten estandarizar estos procesos y definir los flujos de información necesarios. Contar con las herramientas tecnológicas que soporten
+
+TEST:
+
+**1.**  ¿Qué es un marco de gestión de riesgos de IT?**Un sistema de normas, directrices y prácticas recomendadas que ayudan a gestionar los riesgos de ciberseguridad y mantener las regulaciones del sector.Un sistema de seguridad para proteger la infraestructura de la red.Un software de monitoreo de red para detectar amenazas.**
+
+**2.**  ¿Qué beneficios proporciona un marco de gestión de riesgos de IT a una empresa?**Reducción de costos y aumento de eficiencia operativa.Mejora en la calidad del servicio y mejor respuesta ante incidentes.Ahorro de tiempo y aplicable universalmente.**
+
+**3.**  ¿Quién es responsable de la ejecución de un marco de gestión de riesgos de seguridad informática?**El jefe de seguridad de la empresa.La persona responsable varía de una empresa a otra.El gerente de TI.**
+
+**4.**  ¿Qué es un análisis del impacto (Business Impact Analysis, BIA)?**Establece las medidas de seguridad necesarias para proteger la infraestructura de la red.Realiza una evaluación de la madurez del programa de seguridad de una empresa.Identifica los servicios más importantes para la organización y cómo pueden afectar al negocio.**
+
+**5.**  ¿Qué procesos incluye la metodología M_o_R (Management of Risk)**Identificación, evaluación, planificación e implementación.Monitoreo, detección, respuesta e incidentes.Análisis, diseño, desarrollo e implementación.**
+
+**6.**  ¿Qué es el RTO (Recovery Time Objective)**El tiempo necesario para recuperar un servicio afectado.El tiempo que pasará una infraestructura antes de estar disponible nuevamente.El tiempo para detectar una amenaza en la red.**
