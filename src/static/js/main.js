@@ -99,15 +99,21 @@ document.addEventListener('DOMContentLoaded', () => {
 
             const data = await response.json();
             
+            console.log('🔍 Respuesta completa del servidor:', data);
+            console.log('🔍 Status de respuesta:', data.status);
+            console.log('🔍 Data de respuesta:', data.data);
+            
             if (data.status === 'success') {
                 // Completar progreso antes de mostrar resultados
                 completeProgress();
                 setTimeout(() => {
                     hideProgressBar();
+                    console.log('📊 Llamando displayResults con:', data.data);
                     displayResults(data.data);
                 }, 1000);
             } else {
                 hideProgressBar();
+                console.error('❌ Error en respuesta:', data);
                 throw new Error('Error en el análisis');
             }
         } catch (error) {
@@ -118,22 +124,24 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     function displayResults(results) {
-        // Mostrar vulnerabilidades
+        console.log('📊 displayResults llamada con:', results);
+        
+        // Mostrar vulnerabilidades (formato español)
         const vulnerabilitiesContent = document.getElementById('vulnerabilities-list');
-        if (vulnerabilitiesContent && results.vulnerabilities) {
-            vulnerabilitiesContent.innerHTML = formatVulnerabilities(results.vulnerabilities);
+        if (vulnerabilitiesContent && results.vulnerabilidades) {
+            vulnerabilitiesContent.innerHTML = formatVulnerabilities(results.vulnerabilidades);
         }
 
-        // Mostrar impactos
+        // Mostrar impactos (formato español)
         const impactsContent = document.getElementById('impacts-list');
-        if (impactsContent && results.impacts) {
-            impactsContent.innerHTML = formatImpacts(results.impacts);
+        if (impactsContent && results.impactos) {
+            impactsContent.innerHTML = formatImpacts(results.impactos);
         }
 
-        // Mostrar controles
+        // Mostrar controles (formato español)
         const controlsContent = document.getElementById('controls-list');
-        if (controlsContent && results.controls) {
-            controlsContent.innerHTML = formatControls(results.controls);
+        if (controlsContent && results.controles) {
+            controlsContent.innerHTML = formatControls(results.controles);
         }
 
         // Mostrar la sección de resultados
@@ -147,11 +155,11 @@ document.addEventListener('DOMContentLoaded', () => {
     function formatVulnerabilities(vulnerabilities) {
         return vulnerabilities.map(v => `
             <div class="vulnerability-item">
-                <h4>Tipo: ${v.type}</h4>
-                <p><strong>Descripción:</strong> ${v.description}</p>
-                <p><strong>Severidad:</strong> ${v.severity}</p>
-                <p><strong>Categoría:</strong> ${v.category}</p>
-                <p><strong>Recomendación:</strong> ${v.recommendation}</p>
+                <h4>Tipo: ${v.tipo}</h4>
+                <p><strong>Descripción:</strong> ${v.descripcion}</p>
+                <p><strong>Severidad:</strong> ${v.severidad}</p>
+                <p><strong>Categoría:</strong> ${v.categoria}</p>
+                <p><strong>Recomendación:</strong> ${v.recomendacion}</p>
                 ${v.cve_ids && v.cve_ids.length ? `<p><strong>CVE IDs:</strong> ${v.cve_ids.join(', ')}</p>` : ''}
                 ${v.mitre_attack_ids && v.mitre_attack_ids.length ? `<p><strong>MITRE ATT&CK:</strong> ${v.mitre_attack_ids.join(', ')}</p>` : ''}
             </div>
@@ -161,13 +169,13 @@ document.addEventListener('DOMContentLoaded', () => {
     function formatImpacts(impacts) {
         return impacts.map(i => `
             <div class="impact-item">
-                <h4>Tipo: ${i.type}</h4>
-                <p><strong>Descripción:</strong> ${i.description}</p>
-                <p><strong>Impacto:</strong> ${i.impact_level}</p>
-                <p><strong>Recuperable:</strong> ${i.recoverable ? 'Sí' : 'No'}</p>
-                <p><strong>Tiempo de Recuperación:</strong> ${i.recovery_time}</p>
-                ${i.probability ? `<p><strong>Probabilidad:</strong> ${i.probability}</p>` : ''}
-                ${i.risk_value ? `<p><strong>Valor de Riesgo:</strong> ${i.risk_value}</p>` : ''}
+                <h4>Tipo: ${i.tipo}</h4>
+                <p><strong>Descripción:</strong> ${i.descripcion}</p>
+                <p><strong>Impacto:</strong> ${i.impacto}</p>
+                <p><strong>Recuperable:</strong> ${i.recuperable ? 'Sí' : 'No'}</p>
+                <p><strong>Tiempo de Recuperación:</strong> ${i.tiempo_recuperacion}</p>
+                ${i.probabilidad ? `<p><strong>Probabilidad:</strong> ${i.probabilidad}</p>` : ''}
+                ${i.valor_riesgo ? `<p><strong>Valor de Riesgo:</strong> ${i.valor_riesgo}</p>` : ''}
             </div>
         `).join('');
     }
@@ -175,12 +183,12 @@ document.addEventListener('DOMContentLoaded', () => {
     function formatControls(controls) {
         return controls.map(c => `
             <div class="control-item">
-                <h4>Tipo: ${c.type}</h4>
-                <p><strong>Descripción:</strong> ${c.description}</p>
-                <p><strong>Prioridad:</strong> ${c.priority}</p>
-                <p><strong>Costo Estimado:</strong> ${c.estimated_cost}</p>
-                <p><strong>Tiempo de Implementación:</strong> ${c.implementation_time}</p>
-                ${c.reference_frameworks && c.reference_frameworks.length ? `<p><strong>Marcos de Referencia:</strong> ${c.reference_frameworks.join(', ')}</p>` : ''}
+                <h4>Tipo: ${c.tipo}</h4>
+                <p><strong>Descripción:</strong> ${c.descripcion}</p>
+                <p><strong>Prioridad:</strong> ${c.prioridad}</p>
+                <p><strong>Costo Estimado:</strong> ${c.costo_estimado}</p>
+                <p><strong>Tiempo de Implementación:</strong> ${c.tiempo_implementacion}</p>
+                ${c.marco_referencia && c.marco_referencia.length ? `<p><strong>Marcos de Referencia:</strong> ${c.marco_referencia.join(', ')}</p>` : ''}
                 ${c.kpis && c.kpis.length ? `<p><strong>KPIs:</strong> ${c.kpis.join(', ')}</p>` : ''}
             </div>
         `).join('');

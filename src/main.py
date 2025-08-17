@@ -18,7 +18,7 @@ app = FastAPI(
     title="HackAI Risk Management System",
     description="Sistema de gestión de riesgos e incidentes de ciberseguridad "
                 "impulsado por IA",
-    version="1.0.0"
+    version="2.1.0-optimized"
 )
 
 # Configure CORS

@@ -17,21 +17,10 @@ from langchain.callbacks.manager import CallbackManager
 from src.models.models import (
     IncidentAnalysisRequest,
     IncidentAnalysisResponse,
-    LangChainAnalysisConfig,
-    Vulnerability,
-    Impact,
-    Control,
-    RiskLevel,
-    SeverityLevel
+    LangChainAnalysisConfig
 )
 from src.services.rag import get_rag_service
-from src.prompts.security_analysis_prompts import (
-    create_security_analysis_prompt,
-    create_risk_assessment_prompt,
-    create_executive_summary_prompt,
-    create_mitigation_plan_prompt,
-    get_prompt_by_incident_type
-)
+from src.prompts.security_analysis_prompts import create_security_analysis_prompt
 from src.utils.logger import setup_logger
 from src.utils.config import config
 
@@ -95,17 +84,8 @@ class LangChainSecurityAnalyzer:
             raise
 
     def _setup_parsers(self):
-        """Configura los parsers de output estructurado."""
-        # Parser para análisis completo
-        self.analysis_parser = PydanticOutputParser(pydantic_object=IncidentAnalysisResponse)
-        
-        # Parser para componentes individuales
-        self.vulnerability_parser = PydanticOutputParser(pydantic_object=Vulnerability)
-        self.impact_parser = PydanticOutputParser(pydantic_object=Impact)
-        self.control_parser = PydanticOutputParser(pydantic_object=Control)
-        self.risk_parser = PydanticOutputParser(pydantic_object=RiskLevel)
-        
-        # Parser JSON genérico para casos de fallback
+        """Configura parsers esenciales."""
+        # Solo el parser JSON necesario
         self.json_parser = JsonOutputParser()
         
         logger.info("Output parsers configurados correctamente")
@@ -113,39 +93,12 @@ class LangChainSecurityAnalyzer:
     def _setup_chains(self):
         """Configura las cadenas de procesamiento con LangChain."""
         try:
-            # Chain principal de análisis
+            # Chain principal de análisis (simplificado)
             self.analysis_prompt = create_security_analysis_prompt()
             self.analysis_chain = (
-                RunnablePassthrough.assign(
-                    contexto_adicional=lambda x: self._prepare_context(x)
-                )
-                | self.analysis_prompt
+                self.analysis_prompt
                 | self.model_with_fallback
                 | self._create_robust_parser()
-            )
-            
-            # Chain para evaluación de riesgo
-            self.risk_prompt = create_risk_assessment_prompt()
-            self.risk_chain = (
-                self.risk_prompt
-                | self.model_with_fallback
-                | self.json_parser
-            )
-            
-            # Chain para resumen ejecutivo
-            self.executive_prompt = create_executive_summary_prompt()
-            self.executive_chain = (
-                self.executive_prompt
-                | self.model_with_fallback
-                | RunnableLambda(lambda x: x.content)
-            )
-            
-            # Chain para plan de mitigación
-            self.mitigation_prompt = create_mitigation_plan_prompt()
-            self.mitigation_chain = (
-                self.mitigation_prompt
-                | self.model_with_fallback
-                | RunnableLambda(lambda x: x.content)
             )
             
             logger.info("Chains de LangChain configuradas correctamente")
@@ -270,95 +223,35 @@ class LangChainSecurityAnalyzer:
             ]
         }
 
-    def _prepare_context(self, input_data: Dict[str, Any]) -> str:
-        """
-        Prepara contexto adicional para el análisis.
-        
-        Args:
-            input_data: Datos de entrada del incidente
-            
-        Returns:
-            str: Contexto adicional formatado
-        """
-        context_parts = []
-        
-        if input_data.get("urgencia"):
-            context_parts.append(f"**Urgencia:** {input_data['urgencia']}")
-        
-        if input_data.get("contexto_adicional"):
-            context_parts.append(f"**Contexto adicional:** {input_data['contexto_adicional']}")
-        
-        if input_data.get("categoria_inicial"):
-            context_parts.append(f"**Categoría inicial sospechada:** {input_data['categoria_inicial']}")
-        
-        # Agregar información de configuración de análisis
-        context_parts.append(f"**Nivel de detalle requerido:** {self.config.nivel_detalle}")
-        
-        if self.config.incluir_marcos_referencia:
-            context_parts.append("**Marcos de referencia:** Incluir referencias a ISO 27001, NIST, CIS Controls, MAGERIT")
-        
-        return "\n".join(context_parts) if context_parts else ""
+
 
     def _calculate_risk_level(self, vulnerabilities: List[Dict], impacts: List[Dict]) -> Dict[str, Any]:
-        """
-        Calcula el nivel de riesgo basado en vulnerabilidades e impactos.
-        
-        Args:
-            vulnerabilities: Lista de vulnerabilidades identificadas
-            impacts: Lista de impactos potenciales
-            
-        Returns:
-            Dict: Información del nivel de riesgo
-        """
+        """Calcula nivel de riesgo simplificado."""
         try:
-            # Lógica de cálculo de riesgo mejorada
-            severity_weights = {
-                "baja": 1,
-                "media": 2, 
-                "alta": 3,
-                "critica": 4
-            }
+            # Conteo simple de elementos críticos/altos
+            critical_vulns = len([v for v in vulnerabilities if v.get("severidad") in ["critica", "alta"]])
+            critical_impacts = len([i for i in impacts if i.get("impacto") in ["critica", "alta"]])
             
-            # Calcular puntuación de vulnerabilidades
-            vuln_score = sum(severity_weights.get(v.get("severidad", "media"), 2) for v in vulnerabilities)
-            
-            # Calcular puntuación de impactos
-            impact_score = sum(severity_weights.get(i.get("impacto", "media"), 2) for i in impacts)
-            
-            # Puntuación total
-            total_score = (vuln_score + impact_score) / 2
-            
-            # Determinar nivel de riesgo
-            if total_score >= 3.5:
-                risk_level = "critica"
-            elif total_score >= 2.5:
-                risk_level = "alta"
-            elif total_score >= 1.5:
-                risk_level = "media"
+            # Determinación simple del nivel
+            if critical_vulns >= 2 or critical_impacts >= 2:
+                nivel = "alta"
+                puntuacion = 75.0
+            elif critical_vulns >= 1 or critical_impacts >= 1:
+                nivel = "media"
+                puntuacion = 50.0
             else:
-                risk_level = "baja"
-            
-            factors = [
-                f"Vulnerabilidades críticas: {len([v for v in vulnerabilities if v.get('severidad') == 'critica'])}",
-                f"Impactos críticos: {len([i for i in impacts if i.get('impacto') == 'critica'])}",
-                f"Puntuación total: {total_score:.2f}"
-            ]
+                nivel = "baja"
+                puntuacion = 25.0
             
             return {
-                "nivel": risk_level,
-                "puntuacion": total_score * 25,  # Escalar a 0-100
-                "factores": factors,
-                "justificacion": f"Nivel de riesgo {risk_level} basado en análisis cuantitativo de vulnerabilidades e impactos"
+                "nivel": nivel,
+                "puntuacion": puntuacion,
+                "factores": [f"Vulns críticas: {critical_vulns}", f"Impactos críticos: {critical_impacts}"],
+                "justificacion": f"Riesgo {nivel} por elementos críticos identificados"
             }
             
-        except Exception as e:
-            logger.error(f"Error calculando nivel de riesgo: {str(e)}")
-            return {
-                "nivel": "media",
-                "puntuacion": 50.0,
-                "factores": ["Error en cálculo automático"],
-                "justificacion": "Nivel de riesgo por defecto debido a error en cálculo"
-            }
+        except Exception:
+            return {"nivel": "media", "puntuacion": 50.0, "factores": [], "justificacion": "Error en cálculo"}
 
     async def analyze_incident(self, request: IncidentAnalysisRequest) -> IncidentAnalysisResponse:
         """
@@ -397,12 +290,8 @@ class LangChainSecurityAnalyzer:
                 analysis_result["impactos"]
             )
             
-            # Generar resumen ejecutivo
-            executive_summary = await self._generate_executive_summary(
-                request.titulo,
-                risk_level,
-                analysis_result
-            )
+            # Resumen ejecutivo simplificado
+            executive_summary = f"Incidente '{request.titulo}' - Riesgo: {risk_level['nivel']} ({risk_level['puntuacion']:.0f}/100)"
             
             # Extraer recomendaciones inmediatas
             immediate_recommendations = self._extract_immediate_recommendations(
@@ -420,10 +309,7 @@ class LangChainSecurityAnalyzer:
                 id_analisis=analysis_id,
                 timestamp=datetime.utcnow(),
                 modelo_utilizado=f"{self.config.modelo_principal} (fallback: {self.config.modelo_fallback})",
-                nivel_riesgo=RiskLevel(**risk_level),
-                vulnerabilidades=[Vulnerability(**v) for v in analysis_result["vulnerabilidades"]],
-                impactos=[Impact(**i) for i in analysis_result["impactos"]],
-                controles=[Control(**c) for c in analysis_result["controles"]],
+                # Datos simplificados sin objetos Pydantic adicionales
                 resumen_ejecutivo=executive_summary,
                 recomendaciones_inmediatas=immediate_recommendations,
                 confianza_analisis=self._calculate_confidence(analysis_result),
@@ -441,41 +327,7 @@ class LangChainSecurityAnalyzer:
             logger.error(f"Error en análisis de incidente {analysis_id}: {str(e)}")
             return self._create_error_response(analysis_id, str(e))
 
-    async def _generate_executive_summary(
-        self, 
-        titulo: str, 
-        risk_level: Dict[str, Any], 
-        analysis_result: Dict[str, Any]
-    ) -> str:
-        """
-        Genera un resumen ejecutivo del análisis.
-        
-        Args:
-            titulo: Título del incidente
-            risk_level: Nivel de riesgo calculado
-            analysis_result: Resultado del análisis
-            
-        Returns:
-            str: Resumen ejecutivo
-        """
-        try:
-            critical_vulns = [v for v in analysis_result["vulnerabilidades"] if v.get("severidad") == "critica"]
-            high_impact = [i for i in analysis_result["impactos"] if i.get("impacto") in ["critica", "alta"]]
-            priority_controls = [c for c in analysis_result["controles"] if c.get("prioridad") in ["critica", "alta"]]
-            
-            executive_input = {
-                "titulo": titulo,
-                "nivel_riesgo": risk_level["nivel"],
-                "vulnerabilidades_criticas": len(critical_vulns),
-                "impacto_economico": "A determinar según análisis detallado",
-                "controles_prioritarios": len(priority_controls)
-            }
-            
-            return await self.executive_chain.ainvoke(executive_input)
-            
-        except Exception as e:
-            logger.error(f"Error generando resumen ejecutivo: {str(e)}")
-            return f"Incidente de seguridad '{titulo}' requiere atención inmediata. Nivel de riesgo: {risk_level.get('nivel', 'indeterminado')}."
+
 
     def _extract_immediate_recommendations(self, controles: List[Dict[str, Any]]) -> List[str]:
         """
@@ -502,38 +354,12 @@ class LangChainSecurityAnalyzer:
         return immediate[:5]  # Limitar a 5 recomendaciones inmediatas
 
     def _calculate_confidence(self, analysis_result: Dict[str, Any]) -> float:
-        """
-        Calcula el nivel de confianza del análisis.
-        
-        Args:
-            analysis_result: Resultado del análisis
-            
-        Returns:
-            float: Nivel de confianza (0-1)
-        """
-        try:
-            # Factores que influyen en la confianza
-            vuln_count = len(analysis_result.get("vulnerabilidades", []))
-            impact_count = len(analysis_result.get("impactos", []))
-            control_count = len(analysis_result.get("controles", []))
-            
-            # Base de confianza
-            base_confidence = 0.7
-            
-            # Ajustes basados en completitud del análisis
-            if vuln_count >= 2 and impact_count >= 2 and control_count >= 3:
-                base_confidence += 0.2
-            elif vuln_count >= 1 and impact_count >= 1 and control_count >= 2:
-                base_confidence += 0.1
-            
-            # Ajuste por uso del modelo principal
-            if self.config.modelo_principal == "gpt-4.1-turbo":
-                base_confidence += 0.05
-            
-            return min(base_confidence, 0.95)  # Cap en 95%
-            
-        except Exception:
-            return 0.7  # Confianza por defecto
+        """Calcula confianza simplificada."""
+        # Confianza base por modelo
+        if self.config.modelo_principal == "gpt-4.1-turbo":
+            return 0.85
+        else:
+            return 0.75
 
     def _create_error_response(self, analysis_id: str, error_message: str) -> IncidentAnalysisResponse:
         """
@@ -552,52 +378,15 @@ class LangChainSecurityAnalyzer:
             id_analisis=analysis_id,
             timestamp=datetime.utcnow(),
             modelo_utilizado="error_handler",
-            nivel_riesgo=RiskLevel(
-                nivel=SeverityLevel.MEDIA,
-                puntuacion=50.0,
-                factores=["Error en análisis automatizado"],
-                justificacion="Análisis no completado debido a error técnico"
-            ),
-            vulnerabilidades=[],
-            impactos=[],
-            controles=[],
+            nivel_riesgo=None,  # Simplificado sin modelo RiskLevel
+            # Campos simplificados eliminados
             resumen_ejecutivo="Error en el análisis. Se requiere revisión manual.",
             recomendaciones_inmediatas=["Realizar análisis manual del incidente"],
             confianza_analisis=0.0,
             metadatos={"error": error_message}
         )
 
-    async def generate_mitigation_plan(
-        self, 
-        analysis_response: IncidentAnalysisResponse,
-        budget: Optional[str] = None,
-        timeline: Optional[str] = None
-    ) -> str:
-        """
-        Genera un plan de mitigación detallado.
-        
-        Args:
-            analysis_response: Respuesta del análisis de incidente
-            budget: Presupuesto disponible
-            timeline: Timeline objetivo
-            
-        Returns:
-            str: Plan de mitigación detallado
-        """
-        try:
-            mitigation_input = {
-                "titulo": "Plan de Mitigación",
-                "vulnerabilidades": [v.dict() for v in analysis_response.vulnerabilidades],
-                "controles": [c.dict() for c in analysis_response.controles],
-                "presupuesto": budget or "A determinar",
-                "timeline": timeline or "Según prioridades identificadas"
-            }
-            
-            return await self.mitigation_chain.ainvoke(mitigation_input)
-            
-        except Exception as e:
-            logger.error(f"Error generando plan de mitigación: {str(e)}")
-            return "Error generando plan de mitigación. Consultar con especialista en seguridad."
+
 
     async def _get_rag_context(self, request: IncidentAnalysisRequest) -> str:
         """
@@ -642,19 +431,8 @@ class LangChainSecurityAnalyzer:
             return ""
 
     def get_analysis_statistics(self) -> Dict[str, Any]:
-        """
-        Obtiene estadísticas del analizador.
-        
-        Returns:
-            Dict: Estadísticas de uso y rendimiento
-        """
+        """Obtiene estadísticas básicas del analizador."""
         return {
-            "model_config": self.config.dict(),
-            "primary_model": self.config.modelo_principal,
-            "fallback_model": self.config.modelo_fallback,
-            "streaming_enabled": self.config.usar_streaming,
-            "memory_enabled": self.config.usar_memoria,
-            "framework": "langchain",
-            "version": "1.0.0",
-            "rag_enabled": True  # Indicar que RAG está habilitado
+            "model": self.config.modelo_principal,
+            "rag_enabled": True
         }
